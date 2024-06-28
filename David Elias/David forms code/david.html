@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./pexels-paul-ijsendoorn-33041.jpg">
+</head>
+<body>
+  <form action="submission.html" method="post">
+    <section class="username">
+      <label for="username">username</label>
+      <input type="text" name="username" id="username" required>
+    </section>
+    <br>
+    <section class="password">
+      <label for="password">password</label>
+      <input type="password" name="password" id="password" required>
+    </section>
+    <br>
+    <section class="number">
+      <label for="years">years of experience</label>
+      <input type="number" name="years" id="years" step="1" min="1" max="10" required>
+    </section>
+    <br>
+    <section class="range">
+      <label for="volume">volume control</label>
+      <span>Rare</span>
+      <input type="range" name="volume" id="volume" min="0" max="20" step="2">
+      <span>well doneness</span>
+    </section>
+    <br>
+    <section class="checkbox">
+      <p>choose your pizza toppings</p>
+      <label for="cheese">extra cheese</label>
+      <input type="checkbox" name="toppings" id="cheese" value="cheese">
+      <br>
+      <label for="pepperoni">pepperoni</label>
+      <input type="checkbox" name="toppings" id="pepperoni" value="pepperoni">
+      <br>
+      <label for="anchovy">anchovy</label>
+      <input type="checkbox" name="toppings" id="anchovy">
+    </section>
+    <br>
+    <section class="radio">
+      <span>would you like to add some toppings</span>
+      <br>
+      <input type="radio" name="cheesy" id="yes" value="Yes">
+      <label for="yes">yes</label>
+      <input type="radio" name="chessy" id="no" value="No">
+      <label for="no">No</label>
+    </section>
+    <br>
+    <section class="dropdownlist">
+      <label for="lunch">whats for lunch</label>
+      <select name="lunch" id="lunch">
+        <option value="pizza">Pizza</option>
+        <option value="curry">Curry</option>
+        <option value="salad">Salad</option>
+        <option value="ramen">Ramen</option>
+        <option value="tacos">Tacos</option>
+      </select>
+    </section>
+    <br>
+    <section class="datalist">
+      <label for="city">ideal city to visit</label>
+      <input type="text" list="cities" name="city" id="city">
+      <datalist id="cities">
+        <option value="New york city"></option>
+        <option value="Tokyo"></option>
+        <option value="Barcelona"></option>
+        <option value="Mexico city"></option>
+        <option value="Melborne"></option>
+        <option value="other"></option>
+      </datalist>
+    </section>
+    <br>
+    <section class="payments">
+      <label for="payments">method of payments <span>credit card nummber</span></label>
+      <br>
+      <input type="text" name="payments" id="payments" pattern="[0-9]{14,16}">
+    </section>
+    <br>
+    <section class="textarea">
+      <label for="blog">new blog post:</label>
+      <br>
+      <textarea name="blog" id="" cols="30" rows="10"></textarea>
+    </section>
+    <br>
+    <section class="form">
+      <input type="Submit" value="Send">
+    </section>
+    <br>
+    <section class="summary">
+      <label for="summary">summarize your feelings</label>
+      <input type="text" name="summary" id="summary" minlength="5" maxlength="250" required>
+      <input type="submit" value="submit">
+    </section>
+  </form>
+</body>
+</html>

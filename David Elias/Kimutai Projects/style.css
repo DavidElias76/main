@@ -1,0 +1,54 @@
+Sign in{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s linear;
+}
+
+body {
+   height: 100vh;
+   background-image: url(wallpaperbetter.com_1920x1080\ \(2\).jpg);
+   background-size: cover;
+   background-repeat: no repeat;
+   background-position: center;
+   font-family: fantasy;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+    line-height: 70px;
+}
+
+LOGO {
+    color: yellow;
+    margin-left: 100px;
+    font-size: px;
+    letter-spacing: px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+menu {
+    margin-right: 60px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 24px;
+    color: #7a7a7a;
+}
+
+active {
+    
+}
