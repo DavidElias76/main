@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="refresh" content="30">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>Ship To It - Company Packing List</title>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
+  <style>
+    table, th, td{
+      border: 30px solid whitesmoke;
+      background-size: cover;
+      border-collapse: collapse;
+      border-color: rgb(218, 231, 231);
+      height: 100%;
+    }
+    th {
+      text-align: center;
+    }
+    caption {
+      font-size: large;
+    }
+  </style>
 </head>
 <body>
 
-  <ul class="navigation">
-    <li><img src="https://content.codecademy.com/courses/web-101/unit-9/htmlcss1-img_logo-shiptoit.png" height="20px;"></li>
-    <li class="active">Action List</li>
-    <li>Profiles</li>
-    <li>Settings</li>
-  </ul>
+  <section class="navigation">
+    <img src="htmlcss1-img_logo-shiptoit.webp" alt="my image" height="60px">
+    <nav>
+    <h2 class="action list">Action List</h2>
+    <h2 class="profiles">Profiles</h2>
+    <h2 class="Settings">Settings</h2>
+    </nav>
+    
+  </section>
 
-  <div class="search">Search the table</div>
-  
-  <table>
+  <table class="tables" style="width: 100%;">
+    <section class="search">Search the table
+      <input type="text" name="Search the table">
+      <caption>David's Table</caption>
+    </section>
     <thead>
-    <tr>
+    <tr style="height: 100px">
       <th>Company Name</th>
       <th>Number of Items to Ship</th>
       <th>Next Action</th>
       </thead>
     </tr>
+    <hr>
     <tbody>
       <tr>
         <td>Adam's Greenworks</td>
@@ -57,7 +80,6 @@
       </tr>
     </tbody>
   </table>
-
 
 </body>
 </html>
