@@ -1,0 +1,27 @@
+
+  body{ 
+    background-color: rgb(230, 240, 240);
+  }
+
+  nav{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+  }
+  .action-list{
+    text-align: left;
+    flex: 1;
+  }
+  .profiles{
+    text-align: center;
+    flex: 1;
+
+  }
+  .settings{
+    text-align: center;
+    flex: 1;
+  }
+  .search{
+    text-align: right;
+  }
