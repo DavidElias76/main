@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <link rel="shortcut icon" href="icon.png"type="/x-icon">
+    <link rel="stylesheet" href="stylingdavid.css">
+    <title>table format</title>
+
+    <!--cell spacing(border-spacing property) is not needed when border-collpase property is used-->
+    <!-- cell spacing is the space btw each cell-->
+    <!--Cell padding is the space betw each cell edges/corners and cell content/data-->
+    <style>     
+    </style>
+</head>
+<body>
+    <div id="image">
+        <img src="htmlcss1-img_logo-shiptoit.webp" alt="shop">
+    </div>
+    <table>
+        <caption>David's Table</caption>
+    
+        <!-- colgroup used to style the first two/one/three columns and include the span attribute-->
+        <colgroup>
+        <col span="5" style="background-color: aqua;"></colgroup>
+        <thead>
+         <th scope="row">Company name</th>   
+         <th scope="row">Number of items to Ship</th>
+         <th scope="row">Next Action</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Adam Greenworks</td>
+            <td>14</td>
+            <td>Package Items</td>
+        </tr>
+        <tr>
+            <td>Davie's Burger</td>
+            <td>2</td>
+            <td>Send Invoices</td>
+        </tr>
+        <tr>
+            <td>Miss Sally's Southern</td>
+            <td>4</td>
+            <td>Ships</td>
+        </tr>
+        <tr>
+            <td>Baker's Bike Shops</td>
+            <td>3</td>
+            <td>Send Invoices</td>
+        </tr>
+        <tr>
+            <td>Summit Resort Rentals</td>
+            <td>4</td>
+            <td>Ship</td>
+        </tr>
+        <tr>
+            <td>Strike fitness</td>
+            <td>1</td>
+            <td>Enter Order</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
