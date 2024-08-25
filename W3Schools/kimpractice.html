@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="">
+    <style>
+        body{
+            background-image: url(blob-haikei\ 3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div.container{
+            width: 100%;
+
+        }
+        div.mycontainer div {
+            width: 33%;
+            display: inline-block;
+            color: solid black;
+        }
+        #cities{
+            text-align: left;
+            color: solid black;
+            padding: 5px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h2 id="cities">
+        <p>Cities</p>
+    </h2>
+    <div class="mycontainer">
+        <div style="background-color: burlywood;">   
+            <h2>London</h2>
+            <p>London is the capital city of England</p>
+            <p>London has over 13 million people</p>
+        </div>
+        <div style="background-color: rgb(175, 175, 27);">
+            <h2>Rome</h2>
+            <p>Rome is the capital city of Italy</p>
+            <p>Rome has over 3 million people</p>
+        </div>
+        <div style="background-color: darkcyan;">
+            <h2>Oslo</h2>
+            <p>Olso is the capital city of Norway</p>
+            <p>Oslo has over 1 million people</p>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#chapter1">Chapter 1</a></li>
+            <li><a href="#chapter2">Chapter 2</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2 id="chapter1">chapter 1</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, temporibus. Nisi molestiae sed mollitia soluta, molestias consequatur? Placeat nulla vitae voluptatibus itaque quo veniam, maiores quos eos, corporis ab dolor.</p>
+    </div>
+    <div>
+        <h2 id="chapter2">Chapter 2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita facere libero magni. Nemo deserunt cupiditate sunt laboriosam alias aliquid saepe aperiam voluptatum, quasi obcaecati quos adipisci eligendi magni quibusdam non!</p>
+        
+    </div>
+
+    <!-- frames is used to add a document inside a current document-->
+    <iframe src="/Coursera Projects/ghost.html" frameborder="0" width="600px" height="300px" style="border: 2px solid rebeccapurple;" name="iframe-_a"></iframe>
+    <p><a href="/Coursera Projects/ghost.html" target="iframe-_a">ghost</a></p>
+
+
+    <script>
+        document.getElementById("demo").innerHTML="Hello Javascript!";
+    </script>
+
+    <code>
+        x=5;
+        y=6;
+        z=x+y
+    </code>
+
+    <p>save the document by pressing <kbd>ctrl+s</kbd></p>
+
+    <!-- html samp for program output-->
+     <p>Message from the computer</p>
+     <p><samp>File is not found<br>Press F1 to continue</samp></p>
+
+     <!-- html var for variables-->
+      <p>the area o a triangle is 1/2x <var>b</var>x<var>h</var>where <var>b</var>is base and<var>h</var>is a vertical height</p>
+</body>
+</html>

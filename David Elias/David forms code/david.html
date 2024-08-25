@@ -53,7 +53,7 @@
     <br>
     <section class="dropdownlist">
       <label for="lunch">whats for lunch</label>
-      <select name="lunch" id="lunch">
+      <select name="lunch" id="lunch" multiple>
         <option value="pizza">Pizza</option>
         <option value="curry">Curry</option>
         <option value="salad">Salad</option>
@@ -96,7 +96,7 @@
       <input type="text" name="summary" id="summary" minlength="5" maxlength="250" required>
       <input type="submit" value="submit">
     </section>
-  </form>
+  
 
 
   <!-- creating a decription list -->
@@ -109,5 +109,77 @@
   <dd>White cold drink</dd>
 </dl>
 
+<!-- button element use the type attribute-->
+<!--onclick attribute tells the browser to display the message hello world-->
+<button type="button" onclick="alert('Hello David Elias')">Click Me!</button>
+
+<!-- fieldset is used to group related in a form-->
+<!-- legend elements defines a caption for the fieldset-->
+<fieldset>
+  <legend>personalia:</legend>
+  <label for="fname">First Name</label>
+  <br>
+  <input type="text" id="name" name="fname" value="john">
+  <br>
+  <label for="lname">Last Name</label>
+  <br>
+  <input type="text" name="lname" id="lname" value="Doe">
+  <br>
+  <input type="submit" value="Submit">
+</fieldset>
+
+<!--the output element represent a result of calculation perfomed by a script-->
+<input type="range" name="a" id="a" value="50">
+<br>
+<br>
+
+
+<!--input type color-->
+<label for="favcolor">select your favourite color</label>
+<input type="color" name="favcolor" id="favcolor">
+
+<!--input type date-->
+<label for="date">Birthday date</label>
+<input type="date" name="birthday" id="birthday">
+
+<!-- input datetime-local-->
+ <label for="birthdaytime">birthday(date and time)</label>
+ <input type="datetime-local" name="birthdaytime" id="birthdaytime">
+
+ <!--input type email -->
+<label for="email">enter email</label>
+<input type="email" name="email" id="email">
+
+<!--input type image-image becomes submit button -->
+<input type="image" src="icon.png" alt="submit" width="48px" height="48px">
+
+<!--innput type file and browse button for file uploads-->
+<label for="file">select a file</label>
+<input type="file" name="myfile" id="myfile">
+
+<!--input type tel lets you enter telephone number-->
+<label for="phone">enter your phone number</label>
+<input type="tel" name="phone" id="phone" pattern="{0-9}">
+
+<!--html input attributes: the user can copy highlight but cannot delete it-->
+<input type="text" name="fname" id="fname" value="john" readonly>
+
+<!--disbale attribute- the value will not be sent when submitted-->
+<input type="text" name="fname" id="fname" value="john" disabled>
+
+<!--multiple attribute allows more than onne file/value- it uses email and file inputs -->
+<label for="file">selct file</label>
+<input type="file" name="files" id="files" multiple>
+
+
+
+
+
+
+ 
+
+
+
+</form>
 </body>
 </html>
