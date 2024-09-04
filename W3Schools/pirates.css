@@ -1,0 +1,26 @@
+body{
+    background-image: url(blurry-gradient-haikei.svg);
+    background-repeat: no-repeat;/*  repeat-x for horizontall and repeat-y for vertically - or no repeat*/
+    background-attachment: scroll;/* can be fixed or scroll*/
+    background-size: auto;/* can be auto, contain or cover*/
+    
+
+    /* background-origin can also be used to specify position of the image
+     padding-box, border-box or content-box can be used to specify the position*/
+
+}
+
+/* border-style property to style the border*/
+
+/* linked table.html with pirates.css and styling begins*/
+
+table, th, td {
+    border-style: dotted solid double dashed; /* the top border will be dotted, right will be solid, bottom will be double, and left will be double*/
+    border-width: 2px; /* to specify the width of the borders the (top-right-bottom-left)*/   
+    border-collapse: collapse;
+    height: 100px;
+    border-color: #ffffff; /* to specify color of the border to be white*/
+}
+table{
+    width: 100px;
+}
