@@ -18,9 +18,83 @@ table, th, td {
     border-style: dotted solid double dashed; /* the top border will be dotted, right will be solid, bottom will be double, and left will be double*/
     border-width: 2px; /* to specify the width of the borders the (top-right-bottom-left)*/   
     border-collapse: collapse;
-    height: 100px;
     border-color: #ffffff; /* to specify color of the border to be white*/
+    padding: 1px;/* padding is used to create space around content inside the border- has 4 properties(padding top-right-bottom left)*/
+    box-sizing: border-box;/* this property keeps the width at 100px no matter the padding and prevents it fro adding them together*/
+    outline-style: double;/* outline is used to add a line around elements OUTSIDE the borders to make it stand out - use border-style values*/
+
+
 }
-table{
-    width: 100px;
+
+tr,td {
+    text-align: center;
+}
+
+/* text-align-last is used to align the last line on a text. its can be( left, right and centerd )*/
+.a{
+    text-align-last: center;
+    text-decoration-line: overline;/* it is used to draw a line above the text*/
+    text-decoration-style: dashed; /* it can be to set the style of the decoration line at it will appear dashed*/
+    text-decoration-thickness: 10px;/* adding thickness of the dotted line*/
+    text-transform: capitalize;
+}
+.b{
+    text-align-last: right;
+    text-decoration-line: underline; /* it is used o draw a line below the text*/
+    text-decoration-style: dotted; /* it sets the style the decoration line and it  will appear dotted*/
+    text-decoration-thickness: 5px; /* adding thickness od decoration line*/
+    text-transform: lowercase;
+}
+.c{
+    text-align-last: left;
+    text-decoration-line: line-through;/* it is used to draw a line through text*/
+    text-decoration-style: solid;/*it is used to style the decoration line dotted and it will appear solid*/
+    text-decoration-thickness: 2px;/*adding thickness of decoration thickness*/
+    text-transform: uppercase;
+}
+
+/* vertical alignment is used to align image with text*/
+.dead{
+    vertical-align: text-top;
+}
+
+.tap{
+    text-indent: 30px; /* it adds a space or margin in the first line of the text*/ 
+    font-style: italic;/* font appeas italic*/
+}
+
+.lap{
+    letter-spacing: 5px; /* it adds the space btw each letter in the text or characters*/
+    font-style: oblique;/* sets the font to appear slanted*/
+}
+.yap{
+    line-height: 1.8; /*it increase the height bteweeen the first line and the second line*/
+    word-spacing: 10px; /* it adds the space btw each word in text and spacing words . yo can increase or decrease space btw words */
+    white-space: nowrap; /* space btw words is wrapped */
+
+}
+
+/* styling FONTS*/
+
+.A{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;/* it can be italic or normal or oblique*/
+    font-weight: bold;/* adding weight of the font*/
+
+}
+
+.B{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-variant: small-caps;/* the words or letters appear smaller than then original sizes*/
+    font-size: 20px; /* you can use large, medium, smal`l, xx-large and others*/ 
+    font-size: 1.875em; /* using em makes  the user change the font-size of the text*/
+
+
+}
+
+.C{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-size: 2.5em;/* using em make the user change the font-size of the text/words in the browser*/
 }
