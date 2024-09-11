@@ -1,0 +1,69 @@
+
+.mycontainer div{
+    display: inline-block; /*display property has following values: flex, inline, inline-block, grid, block, list-item and others*/
+    /* flexbox/display:flex makes the content appear flexible(can be resize) while grid makes the content stay intact*/
+    /* there is inline-flex or inline grid*/
+    color: black;
+    width: 24%;
+    padding: 4px;
+    border: 1px solid rgb(161, 149, 149);
+    text-align: center;
+    
+}
+/* position specifies the type of position of an element*/
+
+
+/* fixed stays on the same place or at a fixed position  as page as you scroll the page*/
+ 
+.fixed {
+    position: fixed;/* */
+    bottom: 8px;  
+}
+
+/* RELATIVE is the same static but allows you to change the position of the element*/
+.relative{
+    position: relative;
+    left: 20px;
+}
+
+
+/*STICKY positon is relative by default but once the page is scrolled the it turns into a fixed position*/
+.sticky{
+    position: sticky;
+    top: 0;
+    right: 20px;
+    width: 20%;
+}
+
+/* position absolute completely removes the element from its position*- use relative to the parent container */
+.absolute{
+    position: absolute;
+    top: 0;
+}
+
+
+/* to demostrate how absolute and relative work - use the top, right, bottom, left* to style the postion of the element*/
+.image-container{
+    position: relative;
+}
+    
+img{
+    opacity: 0.3;
+}
+.top-left{
+    position: absolute;
+    left: 8px;
+    bottom: 10px;
+
+}
+
+/* Z-index prevenets elemnts form overlapping one another and can be a positive value or a negative value */
+
+/* how to style float and clear property*/
+
+.blob-container{
+    float: right;/* used for formatting and positioning of content. has values like left and right or none*/
+    clear: left;
+
+}
+

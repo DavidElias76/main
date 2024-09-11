@@ -23,6 +23,7 @@ table, th, td {
     box-sizing: border-box;/* this property keeps the width at 100px no matter the padding and prevents it fro adding them together*/
     outline-style: double;/* outline is used to add a line around elements OUTSIDE the borders to make it stand out - use border-style values*/
 
+    /* add overflow-x:auto/scroll in div element to make responsive*/
 
 }
 
@@ -55,7 +56,7 @@ tr,td {
 
 /* vertical alignment is used to align image with text*/
 .dead{
-    vertical-align: text-top;
+    vertical-align: text-top;/* has other values like baseline, text-bottom, supercript and subscript */
 }
 
 .tap{
@@ -74,7 +75,7 @@ tr,td {
 
 }
 
-/* styling FONTS*/
+/* styling FONTS font-size, font-variant, font-weight, font-style, font-family*/
 
 .A{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,3 +99,24 @@ tr,td {
     font-style: normal;
     font-size: 2.5em;/* using em make the user change the font-size of the text/words in the browser*/
 }
+
+/* styling a link button */
+
+.Button{
+    color: black;
+    display: inline-block;
+    background-color: blue;
+    padding: 20px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* CSS list*/
+
+.classic {
+    list-style-image: url();/* the image can be .gif/.png/.jpg*/
+    list-style-position: inside; /* position can be outside and inside*/
+}
+
