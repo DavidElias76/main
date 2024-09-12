@@ -1,0 +1,194 @@
+/* unvisited link*/
+a:link{
+    color: red;
+}
+
+/* visited link*/
+a:visited{
+    color: green;
+}
+
+/* pseudo classes and html classes*/
+a.highlight:hover{
+    color: red;
+    font-size: 30px;
+}
+
+/* when you hover to the mouse it turns to purple
+a:hover{
+    color: purple;
+}
+*/
+
+/* selected link*/
+a:active{
+    color: blue;
+}
+
+/* hover over div element*/
+
+/*
+div{
+    background-color: red;
+    color: black;
+    width: 20%;
+    height: 20px;   
+}
+div:hover{
+    background-color: blue;
+}
+    */
+
+/* creating a simple toolkit hover is used when you hover the div element a element is displayed
+add a display:none and display:block*/ 
+
+/*p{
+    display: none;
+    padding: 20px;
+    background-color: yellow;
+
+}
+
+div:hover p{
+    display: block;
+}
+*/
+
+/* css first-child pseudo-class - it styles all first paragraph elements in  the div container in a document*/
+/*
+p:first-child{
+    color: blue;
+}
+*/
+
+
+/*Match the first <i> elements in all paragraph elements- it changes the color of a formatted text <i> italic in all paragraph element in a both container and not in a container*/
+/*
+p i:first-child{
+    color: rgb(236, 9, 9);
+}
+*/
+
+
+/* Matching all elements in all first child <p> elements- changing the color of strong word a formatted tetx in italic in all first paragragh elements in div container*/
+/*
+p:first-child i {
+    color: blue; 
+}
+*/
+
+
+/* CSS PSEUDO-ELEMENTS*/
+
+/* pseudo element first line changes the first line aof all paragragh elements */
+
+/* you can use multiple pseudo elements in a paragraph  or use the one by one */
+
+P::first-line{
+    color: red;
+    font-variant: small-caps;
+}
+
+
+/* first-line elements is used to change the first letter of a paragragh element*/
+
+p::first-letter{
+    font-size: xx-large;
+    color: blue;
+}
+
+
+
+/* combining first line letter with html classes*/
+
+p.intro::first-letter{
+    color: red;
+    font-size: 200%;
+}
+
+
+/* you can also use multiple pseudo elements by suing the first-line and first-letter and using different value properties
+look at the first-line and first-letter*/
+
+
+/* pseudo Element ::before is used to insert some content before an element*/
+
+h1::before{
+    content: url(smiley.gif);
+}
+
+/* pseudo element ::after is used to insert some content after an element*/
+
+h1::after{
+    content: url(smiley.gif/png/jpg);
+}
+
+
+/* pseudo ::marker element is used to change the marker of list items*/
+
+::marker{
+    color: yellow;
+    font-size: 30px;
+
+}
+
+/* pseudo ::selection element when used it changes the when highlighting the text or wanting to be copied*/
+
+h2::selection{
+    color: red;
+    background-color: yellow; /* you can use properties: color/background/cursor/outline*/
+}
+
+
+
+/*.image-container{
+    display: inline-block;
+    opacity: 0.3;    
+}
+*/
+
+img{
+    opacity: 0.5;
+}
+img:hover {
+    opacity: 1.0;
+}
+.trn{
+    background-color: #04AA6D;
+}
+
+
+/* how to create transparency box*/
+.first{
+    opacity: 0.1;
+}
+.second{
+    opacity: 0.3;
+}
+.third{
+    opacity: 0.6;
+}
+.fourth{
+    opacity: 1.0;
+}
+
+
+/* create a transparency box and a text inside it */
+
+.transbox{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+    opacity: 0.6;
+    background-color: white;
+    
+}
+.background{
+    background-image: url(img_5terre.jpg);
+    border: 2px solid black;
+    background-repeat: repeat-x;
+}
+.transbox p{
+    font-size: large;
+}

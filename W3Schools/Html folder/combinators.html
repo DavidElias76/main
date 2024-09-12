@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* css combinators*/
+        div p{
+            background-color: rgb(214, 90, 90);/* using the (decendants selector) styles all elements inside the div container regardless of the a container inside it*/
+        }
+
+        div>p {
+            background-color: green; /* using the (child selector) does not style elements inside the section or any other container inside div only elements inside div container*/
+        }
+        div+p{
+            background-color: rgb(101, 101, 155);/* using Adjacent Selector selects the first element or elements that are after div container or outside the div container*/ 
+        }
+        div~p{
+            background-color: rgb(209, 201, 201);/* using the general sibling selector styles all elements that are outside the div conatiner including the adjacent selector or any other conatiner and do not have any container on them*/
+        }
+
+        /* general sibling style all lements that are outside the div and tsi removes the adjacent styling selector and cannot be used together when styling */
+    </style>
+</head>
+<body>
+    <!-- how to use descendants combinators-->
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quasi numquam et corrupti beatae non excepturi recusandae facere similique tenetur sunt pariatur quidem cumque dolorum rem veritatis, est odit magnam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, vero similique consectetur praesentium exercitationem optio ullam dolores, magnam ipsa fugiat maxime iure inventore, repudiandae itaque temporibus nobis minus veniam at.</p>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quod a placeat commodi ab, ullam numquam assumenda saepe adipisci vel eveniet velit. Voluptate eaque velit eos nobis nisi sapiente repellat!</p>
+            <p>Voluptatibus soluta nemo ipsum assumenda excepturi pariatur dignissimos aliquid nam ab dolorem alias quasi, rerum sed eius provident quia praesentium distinctio eos odit laudantium expedita. Nam saepe nihil neque rem!</p>
+            <p>Officia ratione exercitationem aperiam excepturi laborum dolor expedita labore perspiciatis facilis corporis, vel eum iure sint ut, suscipit similique non aut est ea accusantium ab laudantium eos minima beatae! Voluptatem.</p>
+        </section>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloremque autem, ad repudiandae amet sint libero praesentium distinctio ipsam recusandae, aliquam nesciunt necessitatibus dolores hic perspiciatis molestias, magnam veniam cumque?</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptatem amet ab sit dolore corporis assumenda provident atque corrupti recusandae in nostrum reiciendis ipsa, sed iste blanditiis, magnam culpa aspernatur!</p>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos alias blanditiis est quos numquam hic vel ab, totam possimus consequatur optio laborum ipsam, nulla tempora et quo, facilis facere sed!</p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio illo modi perspiciatis molestias velit a eius aspernatur assumenda commodi, sit impedit praesentium corrupti odit esse similique ducimus explicabo alias ipsa!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, voluptatem cumque explicabo quo adipisci ipsum consequuntur ad ipsam quae similique ratione esse repellat ut minus suscipit eius beatae ipsa. Ratione.</p>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium excepturi animi veniam molestias, magni in, vel error laborum distinctio odio asperiores eum ullam adipisci possimus quas suscipit cupiditate perspiciatis omnis.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quisquam, nisi ullam voluptatibus iste illum veritatis qui mollitia ad et, modi repellat ex harum nostrum recusandae repellendus cumque quia eveniet.</p>
+</body>
+</html>

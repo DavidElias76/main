@@ -1,5 +1,5 @@
 body{
-    background-image: url(blurry-gradient-haikei.svg);
+    /*background-image: url(/W3Schools/images\ folder/blurry-gradient-haikei);*/
     background-repeat: no-repeat;/*  repeat-x for horizontall and repeat-y for vertically - or no repeat*/
     background-attachment: scroll;/* can be fixed or scroll*/
     background-size: auto;/* can be auto, contain or cover*/
@@ -69,7 +69,7 @@ tr,td {
     font-style: oblique;/* sets the font to appear slanted*/
 }
 .yap{
-    line-height: 1.8; /*it increase the height bteweeen the first line and the second line*/
+    line-height: 0.8; /*it increase the height bteweeen the first line and the second line*/
     word-spacing: 10px; /* it adds the space btw each word in text and spacing words . yo can increase or decrease space btw words */
     white-space: nowrap; /* space btw words is wrapped */
 
