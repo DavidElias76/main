@@ -1,0 +1,114 @@
+ul{
+    background-color: #333;
+    list-style-type: none;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;/* removes the scrollbar and keeps it hidden*/
+    position: fixed;
+    /*bottom: 0; the bottom property follows the   makes th navigation appear below */
+    /*postion: sticky makes the scrollbar stick at the top when the page is scrolled */
+
+}
+
+li a {
+    display: block;/* using the display block and float property together*/
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+}
+
+li{
+    float: left;/* makes the elemenst appear on the left*/
+}
+li a:hover{
+    background-color: #111;
+}
+/*a:first-child{
+    background-color: green;
+}
+*/
+
+
+
+/*The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position:absolute). */
+.dropbtn{
+    background-color: green;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    width: 15%;
+}
+
+.dropdown{
+    position: relative;/* content can adjust position */
+    /*display: inline-block;*/
+}
+
+.dropdown-content{
+    display: none; /*removes the element displyed n the browser*/
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);/* box-shadow property to make the dropdown menu look like a "card".*/
+    padding: 12px 16px;
+    z-index: 1; /* prevenst the element from overlapping since position relative and fixed is used */  
+}
+.dropdown:hover .dropdown-content{ 
+    display: block;
+}
+.dropdown-content a{
+    display: block;
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown-content a:hover{
+    background-color: rgb(218, 115, 115);
+}
+
+
+
+
+
+/* craeting a dropdown menu 
+
+.dropbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content{
+    position: absolute;
+    background-color: #e7e4e4;
+    z-index: 1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+}
+.dropdown-content a{ /* styles the list elements by changing the color, making them appear in a block by display:block and padding
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{ /* this changes the color of the hover inside the block of links- when you hover between the links the color chages btween each link 
+    background-color: #a79090;
+}
+.dropdown:hover.dropdown-content{ /* when you hover on the element with a class dropdown a block of list appear
+    display: block;
+}
+.dropdown:hover.dropbtn{
+    background-color: #3e8e41;
+}

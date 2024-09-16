@@ -1,0 +1,36 @@
+
+body{
+    margin: 0;/* removes margin of the page*/
+}
+
+
+ul {
+    list-style-type: none; /* to remove bullets in unordered list*/
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    width: 200px;/* block elements take up full width so it is required you specifty the with of the block*/
+    position: fixed;/* make it stick even when the page is scrolled*/
+    overflow: auto;/* enables you to add a scrollbar and make the page scroll*/ 
+    height: 100%;/* full height*/
+
+}
+
+/* To create a Vertical Navigation bar*/
+
+li a{
+    display: block;
+    padding: 10px 16px;/* 10px for the top and bottom - 16px for the right and left */
+    text-decoration: none;/* to remove decoration line*/
+    color: black;
+    border: 1px solid black;
+}
+li a:hover{
+    background-color: #555;
+    color: white;
+}
+a:active{
+    background-color: #04AA6D;
+    color: white;
+}
+
