@@ -1,27 +1,64 @@
 
-body{
-    margin: 0;/* removes margin of the page*/
+            /*CREATING A HORIZONTAL NAVIGATION
+
+ul{
+    background-color: #333;
+    list-style-type: none;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;/* removes the scrollbar and keeps it hidden
+    /*position: fixed;
+    /*bottom: 0; the bottom property follows the   makes th navigation appear below 
+    /*postion: sticky makes the scrollbar stick at the top when the page is scrolled
+
+}
+
+li a {
+    display: block;/* using the display block and float property together
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
 }
 
 
+li{
+    float: left;/* makes the elemenst appear on the left*
+}
+li a:hover{
+    background-color: #111;
+}
+/*a:first-child{
+    background-color: green;
+    */
+
+
+
+
+        /*  CREATING A VERTICAL NAVIGATION BAR
+
+body{
+    margin: 0;/* to remove margin in the document
+}
+
 ul {
-    list-style-type: none; /* to remove bullets in unordered list*/
+    list-style-type: none; /* to remove bullets in unordered list
     margin: 0;
     padding: 0;
     background-color: grey;
-    width: 200px;/* block elements take up full width so it is required you specifty the with of the block*/
-    position: fixed;/* make it stick even when the page is scrolled*/
-    overflow: auto;/* enables you to add a scrollbar and make the page scroll*/ 
-    height: 100%;/* full height*/
+    width: 200px;/* block elements take up full width so it is required you specifty the with of the block
+    position: fixed;/* make it stick even when the page is scrolled
+    overflow: auto;/* enables you to add a scrollbar and make the page scroll 
+    height: 100%;/* full height
 
 }
 
-/* To create a Vertical Navigation bar*/
-
 li a{
     display: block;
-    padding: 10px 16px;/* 10px for the top and bottom - 16px for the right and left */
-    text-decoration: none;/* to remove decoration line*/
+    padding: 10px 16px;/* 10px for the top and bottom - 16px for the right and left 
+    text-decoration: none;/* to remove decoration line
     color: black;
     border: 1px solid black;
 }
@@ -34,3 +71,63 @@ a:active{
     color: white;
 }
 
+
+        /* CREATING A HOVERABLE IMAGE
+
+.image-container{
+    position: relative;
+}
+.img-ctn{
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16pc 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.image-container:hover .img-ctn{
+    display: block;
+}
+desc{
+    background-color: burlywood;
+    color: black;
+    text-align: center;
+}
+    */
+ul{
+    background-color: grey;
+}
+li{
+    list-style-type: none;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    display: inline;
+  
+    padding: 20px;
+}
+
+
+.dropdown{
+    position: relative;
+
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px;
+    z-index: 1;
+}
+.dropdown:hover.dropdown-content{
+    display: block;
+}
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+
+}.dropdown-content:Hover{
+    background-color: burlywood;
+}
