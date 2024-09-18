@@ -1,5 +1,5 @@
 
-            /*CREATING A HORIZONTAL NAVIGATION
+    /* CREATING A HORIZONTAL NAVIGATION
 
 ul{
     background-color: #333;
@@ -7,7 +7,7 @@ ul{
     height: 50px;
     margin: 0;
     padding: 0;
-    overflow: hidden;/* removes the scrollbar and keeps it hidden
+    overflow: hidden;/* removes the scrollbar and keeps it hidden- also to change the oveflow of the content*/
     /*position: fixed;
     /*bottom: 0; the bottom property follows the   makes th navigation appear below 
     /*postion: sticky makes the scrollbar stick at the top when the page is scrolled
@@ -25,7 +25,7 @@ li a {
 
 
 li{
-    float: left;/* makes the elemenst appear on the left*
+    float: left;/* makes the elemenst appear on the left
 }
 li a:hover{
     background-color: #111;
@@ -92,21 +92,32 @@ desc{
     color: black;
     text-align: center;
 }
-    */
+*/
+
+
+
+/* CREATING A DROPDOWN MENU INSIDE A HORIZONTAL NAVIGATION BAR*/
+
 ul{
-    background-color: grey;
+    list-style-type: none;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;/* changes the overflow of the content in a horizontal nav bar*/
+
 }
 li{
-    list-style-type: none;
+    float: left;/* making item appear inline and float to the left*/
 }
 li a{
     color: white;
     text-decoration: none;
-    display: inline;
-  
+    display: block;/* works together with a display block*/
     padding: 20px;
 }
-
+li a:hover{
+    background-color: red;
+}
 
 .dropdown{
     position: relative;
@@ -115,19 +126,18 @@ li a{
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: whitesmoke;
-    box-shadow: 0px 8px 16px 0px;
+    padding: 12px 16px;
+    background-color: rgb(194, 145, 145);
+    box-shadow: 0px 8px 16px 0px white;
     z-index: 1;
-}
-.dropdown:hover.dropdown-content{
-    display: block;
 }
 .dropdown-content a{
     display: block;
-    text-decoration: none;
-    color: black;
     padding: 15px;
-
-}.dropdown-content:Hover{
-    background-color: burlywood;
+    color: black;
+    text-decoration: none;
 }
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
+

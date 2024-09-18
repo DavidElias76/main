@@ -1,0 +1,21 @@
+/* CREATING A IMAGE GALLERY*/
+
+
+div.gallery{ /* you can also use float property: left instead of display:inline-block*/
+    padding: 0;
+    margin: 0;
+    width: 24%;
+    display: inline-block; /* creates a space between elements */
+    height: auto;
+    border: 1px solid #ccc;
+}
+div.gallery:hover {
+    border: 1px solid black;
+}
+.desc{
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
