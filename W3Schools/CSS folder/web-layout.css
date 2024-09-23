@@ -1,0 +1,44 @@
+body{
+    margin-top: 0;
+}
+.header{
+    background-color: #c9bcbc;
+    padding: 20px;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+li{
+    float: left;
+}
+li a{
+    text-decoration: none;
+    color: rgb(223, 217, 217);
+    display: block;
+    padding: 14px 18px;
+}
+li a:hover{
+    background-color: grey;
+    color: white;
+}
+.column{ 
+    /*Creates a 3 column that float next to each other and specifying the width of each column*/
+    float: left;
+    width: 33.33%;
+    /*padding: 15px; makes the elemenstexpand by adding the padding property and a 2 column is created instead of 3*/
+}
+.row::after{ /* this makes the content resize*- using the clearflix hack property*/
+    clear: both;
+    content: "";
+    display: table;
+}
+.footer{
+    background-color: #c9bcbc;
+    text-align: center;
+    padding: 14px 16px;
+}

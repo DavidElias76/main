@@ -1,0 +1,110 @@
+a[target] {
+    background-color: yellow;/* selects all elements with target atrributes*/
+}
+
+a[target="_blank"] {
+    background-color: red;/* selects elemnts with a specific target attribute _blank (target=_blank)*/
+}
+
+[title~=mountains] {
+    border: 5px solid red; /* selects all element with a specific word as a title~=mountains- 
+    all elemest with moutais as a word are styles */
+}
+
+[class|="top"] {
+    background-color: blue;/*selects all elements with a class/id attribute with specific word as a value or the word
+    or the word value si followed by a hyphen is also selected*/
+}
+[class$="test"]{
+    background-color: green; /* selects all element whose attribute value ENDS with a specific word value*/
+}
+
+
+/* STYLING CSS FORMS USING ATTRIBUTES*/
+.form{
+    background-color: grey;
+    max-width: 100%;
+    overflow: auto;
+}
+[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    box-sizing: border-box;/* Keeps the width at 100% when padding and margin is added*/
+    margin: 8px 0;
+    border: 2px solid black;/* if you want a border-bottom add it*/
+    border-radius: 10px;/* to have rounded corners*/
+    background-color: rgb(226, 170, 130);
+    color: black;
+
+}
+input[type=text]:focus{
+    background-color: lightblue;
+    outline: none;/* reomves the outline that is by default when the browser is focused*/
+}
+[type=search] {
+    background-image: url('../images folder/icons8-search-30.png');
+    background-position: 10px 10px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+
+}
+::placeholder{
+    padding-left: 40px;
+}
+textarea{
+    resize: none;/* resizes the text area according to the size of the text*/
+    width: 200px;
+    height: 100px;
+}
+select{
+    width: 150px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+[type=submit],[type=reset] {
+    background-color: green;
+    padding: 16px 32px;
+    border: none;
+    color: white;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* CREATING A CSS COUNTERs
+body{
+    counter-reset: section;
+}
+h2::before{
+    counter-increment: section;
+    content: "Section" counter(section) ":";
+}
+*/
+
+/*NESTING A COUNTERS*/
+body{
+    counter-reset: section;
+}
+h1{
+    counter-reset: subsection;
+}
+h1::before{
+    counter-increment: section;
+    content: "Section" counter(section) ":";
+}
+h2::before{
+    counter-increment: subsection;
+    content: counter(subsection)"." counter(subsection);
+}
+
+
+ol{
+    counter-reset: section;
+    list-style-type: none;
+}
+li::before{
+    counter-increment: section;
+    content: counters(section, ".") "";
+}

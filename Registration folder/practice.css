@@ -1,0 +1,40 @@
+body{
+    background-image: url("/W3Schools/images folder/layered-waves-haikei.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.loginform{
+    border: 2px solid black;
+    opacity: 0.9;
+    padding-left: 15px;
+    width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 350px;
+    margin-right: 350px;
+
+    
+}
+[type=text] {
+    border: 1px solid black;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 60%;
+    color: black;
+    outline: none;
+}
+[type=text] :focus{
+    border: 1px solid rgb(90, 20, 20);
+}
+[type=button] {
+    border: 1px solid black;
+    padding: 14px 16px;
+    border-radius: 5px;
+    background-color: rgb(123, 150, 123);
+    color: rgb(22, 21, 21);
+
+}
+[type=button]:hover{
+    background-color: rgb(101, 189, 101);
+}

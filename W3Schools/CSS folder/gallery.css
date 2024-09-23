@@ -5,7 +5,7 @@ div.gallery{ /* you can also use float property: left instead of display:inline-
     padding: 0;
     margin: 0;
     width: 24%;
-    display: inline-block; /* creates a space between elements */
+    display: inline-block; /* creates a space between elements- specify the width and theheight to use the inline-block */
     height: auto;
     border: 1px solid #ccc;
 }
@@ -19,3 +19,63 @@ div.gallery:hover {
     color: black;
 }
 
+
+/*HOW TO USE CLEAR PROPERTY AND FLOAT PROPERTY*/
+.img2{
+    float: right;
+}
+.clearflix{
+    overflow: auto;/* if the image of floated element ins taller than the next element, overflow: auto is used */
+    border: 2px solid black;
+
+}
+.clearflix::after{ 
+    content: "DAVID ELIAS KIMUTAI";/*a text is added after the floated element*/
+    clear: both;
+    display: table;
+}
+
+ /*clear property works well with float property- The element that is next to the floated element can be a paragraph
+element or any othe element and it is always specified below.
+It can be = both/left/right/none/inherit 
+p{
+    clear: both;
+}
+*/
+
+/* HOW TO CREATE A IMAGE SPRITES USING THE IMAGE.GIF AND USE IT TO OPEN DIFFERENT TYPES OF LINKS*/
+
+.navlist{
+    position: relative;
+
+}
+.navlist li{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navlist li a{
+    display: block;
+    height: 50px;
+}
+.home{
+    background-image: url("/W3Schools/images folder/Img_navsprites.gif");
+    width: 46px;
+    left: 0;
+
+}
+
+.prev{
+    background-image: url("/W3Schools/images folder/Img_navsprites.gif");
+    left: 65px;
+    width: 45px;
+}
+
+.next{
+    background-image: url("/W3Schools/images folder/Img_navsprites.gif");
+    left: 129px;
+    width: 43px;
+}
