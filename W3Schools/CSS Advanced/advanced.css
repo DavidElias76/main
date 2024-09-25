@@ -1,0 +1,35 @@
+/* CREATING A BORDER ELEMENT*/
+.name{
+    border: 2px solid black;
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+    margin: 20px;
+}
+
+/* USING THE BORDER-RADIUS PROPERTY O STYLE EACH CORNER OF BORDER RADIUS- CSS ADVANCED*/
+.name{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 55px;
+}
+
+/* border-radius can also be used to create a elliptical corners
+.name{
+    border-radius: 50px / 20px ;
+}
+*/
+
+/* USING THE BORDER-IMAGE PROPERTY SHORTHAND ARE SOURCE/SLICE/WIDTH/OUTSET/REPEAT*/
+.image{
+    border: 10px solid;
+    border-image: url('../images folder/img_forest.jpg') 30 stretch;
+    border-image-slice: fill;/*other valuea are in % /number*/
+    border-image-width: 30px;
+    border-image-outset: 5px;
+    border-image-repeat: repeat;/* other values are stretch/repeat/round/space*/
+    padding: 20px;
+    text-align: center;
+}
+
