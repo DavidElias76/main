@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>navigation</title>
+    <style>
+        ul{
+        list-style-type: none;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;/* changes the overflow of the content in a horizontal nav bar*/
+
+    }
+    li{
+        float: left;/* making item appear inline and float to the left*/
+    }
+    li a{
+        color: white;
+        text-decoration: none;
+        display: block;/* works together with a display block*/
+        padding: 20px;
+    }
+    li a:hover{
+        background-color: red;
+    }
+
+    .dropdown{
+        position: relative;
+
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        padding: 12px 16px;
+        background-color: rgb(194, 145, 145);
+        box-shadow: 0px 8px 16px 0px white;
+        z-index: 1;
+    }
+    .dropdown-content a{
+        display: block;
+        padding: 15px;
+        color: black;
+        text-decoration: none;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+    /* USING THE CSS COUNTER*/
+    body{
+        counter-reset: section;
+    }
+    h1{
+        counter-reset: subsection;
+    }
+    h1::before{
+        counter-increment: section;
+        content: "Section" counter(section) ".";
+    }
+    h2::before{
+        counter-increment: subsection;
+        content: counter(subsection)"." counter(subsection) " ";
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropbtn"><a href="#">Settings</a>
+            <div class="dropdown">
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+<h1>HTML/CSS Tutorial</h1>
+<h2>CSS</h2>
+<h2>Bootsrap</h2>
+<h2>W3.CSS</h2>
+
+<h1>Scripting languages</h1>
+<h2>JavaScript</h2>
+<h2>Jquery</h2>
+<h2>React</h2>
+
+<h1>Programming language</h1>
+<h2>Python</h2>
+<h2>Java</h2>
+<h2>C++</h2>
+
+</body>
+</html>

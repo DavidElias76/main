@@ -8,12 +8,12 @@ a[target="_blank"] {
 
 [title~=mountains] {
     border: 5px solid red; /* selects all element with a specific word as a title~=mountains- 
-    all elemest with moutais as a word are styles */
+    all elements with mountains as a word are styles */
 }
 
 [class|="top"] {
     background-color: blue;/*selects all elements with a class/id attribute with specific word as a value or the word
-    or the word value si followed by a hyphen is also selected*/
+    or the word value is followed by a hyphen is also selected*/
 }
 [class$="test"]{
     background-color: green; /* selects all element whose attribute value ENDS with a specific word value*/
@@ -106,5 +106,5 @@ ol{
 }
 li::before{
     counter-increment: section;
-    content: counters(section, ".") "";
+    content: counterw(section, ".") "";
 }

@@ -33,3 +33,245 @@
     text-align: center;
 }
 
+/* USING THE CSS MULTILPLE BACKGROUNDS- multiple backgrounds are separated by a comma in the css
+
+.img-container{
+background-image: url("../images folder/img_mountains.jpg"), url("../images folder/image2.jpg");
+    background-size: cover,contain;
+    background-position: right bottom, left top;
+    background-repeat: no-repeat,repeat;
+    height: 400px;
+}
+*/
+/* CREATING A HERO IMAGE- ADDING A TEXT INSIDE A IMAGE 
+.hero-imag{
+    background-image: url("../images folder/img_mountains.jpg");
+    background-size: cover;
+    position: relative;
+    height: 400px;
+
+}
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
+
+
+/* CSS GRADIENT COLOR - DEFINING GGRADIENT COLOR NB: ALWAYS SPECIFY THE WIDTHA ND HEIGHT OF GRADIENT COLORS*/
+
+/* 1 .LINEAR GRADIENT COLOR - you can use multiple color for linear gradient*/
+
+#grad-1{
+    /*background-image: linear-gradient(red, yellow); direction for TOP to BOTTOM*/
+    /*background-image: linear-gradient(to right, red, yellow); Direction from LEFT TO RIGHT*/
+    /*background-image: linear-gradient(to bottom right, red, yellow); Drection from TOP LEFT TO BOTTOM RIGHT/ TOP RIGHT TO BOTTOM LEFT*/
+    height: 200px;
+}
+/*USING THE ANGLES IN LINEAR GRADIENTS
+#grad-1{
+    /*background-image: linear-gradient(180deg, red, yellow);*/
+     /* you can use other deg values like:
+     - 0deg is equivalent to "to top" direction
+     - 90deg is eqivalent to "to right" direction
+     - 180deg is equivalent to "to bottom" direction
+}
+*/
+/* USING MULTIPLE COLORS STOPS
+#grad-1{
+    background-image: linear-gradient(to right, red, orange,yellow, green,blue,indigo, violet);
+}
+*/
+
+/* USING TRASPARENCY/OPACITY
+#grad-1{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+*/
+
+/* REPEATING-LINEAR-GRADIENT
+#grad-1{
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+*/
+
+/* 2 . RADIAL GRADIENTS */
+
+/*Evenly spaced color stops
+#grad-1{
+    background-image: radial-gradient(red, yellow, green);
+}
+*/
+
+/*Differently spaced color strips
+#grad-1{
+    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+*/
+
+/* Set shape fo the radial-gradient
+#grad-1{
+    background-image: radial-gradient(circle, red, yellow, green); /* shapes can be circle/rectangle/square
+
+} 
+*/
+/*Using different keywords
+#grad-1{
+    background-image: radial-gradient(closest-side at 60% 50%, red, yellow, black);
+}
+*/
+
+/* repeating radial gradient
+#grad-1{
+    background-image: radial-gradient(red, yellow 10%, green 15%);
+}
+*/
+
+
+/* 3. CONIC GRADIENTS*/
+
+/*Position around a center point - 0degree=center point
+#grad-1{
+    background-color: red;
+    background-image: conic-gradient(red, yellow, green);
+    width: 200px;
+}
+*/
+
+/* Using three different colors and degrees
+#grad-1{
+    background-image: conic-gradient(red 45deg, yellow 90deg, green 120deg);
+}
+*/
+
+/* creating a Pie Chart*/
+
+/* Adding border radius property to make it look like a pie chart
+#grad-1{
+    background-image: conic-gradient(red, yellow, green, blue, black);
+    border-radius: 50%;
+    width: 200px;
+}
+*/
+/* Creating a pie chart using different colors and degrees
+#grad-1{
+    background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg,green 270deg, blue 270deg);
+    width: 200px;
+    border-radius: 50%;
+}
+*/
+/* creating a conic gradinet with specified "FROM ANGLE"
+#grad-1{
+    background-image: conic-gradient(from 90deg,red, yellow, green);
+    border-radius: 50%;
+    width: 200px;
+}
+*/
+/* Repaeting a conic gradient*/
+#grad-1{
+    background-image: repeating-conic-gradient( red 10%, yellow 20%);
+    border-radius: 50%;
+    width: 200px;
+}
+
+/*CSS TETX SHADOW EFFECTS*/
+/*1. TEXT SHADOW
+h3{
+    text-shadow: 2px 2px red;
+}
+*/
+
+/*Multiple shadows are seperated by a comma
+h1{
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+    */
+h3{
+    text-shadow: 0 0 5px #ff0000, 0 0 3px #0000ff;
+}
+h2{
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+h1{
+    text-shadow: -1 0 black, 0 1px black, 0 -1px black;
+}
+
+/* CREATING A BOX SHADOW*/
+
+.shadow{
+    box-shadow: 10px 10px 5px 12px lightblue inset;
+    background-color: coral;
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+}
+.class{
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 200px;
+    text-align: center;
+}
+.header{
+    padding: 30px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}
+.container{
+    padding: 20px;
+}
+.polaroid{
+    box-shadow:0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+.img-contaner{
+    padding: 20px;
+}
+
+/* CSS TEXT EFFECTS*/
+
+.test-1{
+    border: 2px solid black;
+    text-overflow: clip;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+.test-2{
+    border: 2px solid black;
+    text-overflow: ellipsis;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.test{
+    border: 2px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px;
+}
+div.test:hover{
+    overflow: visible;
+}
+.testing{
+    width: 11em;
+    word-wrap: break-word;/*breaks the word and wrap onto the next line*/
+    word-break: keep-all;/* the lines will break at hyphens- other values is break-all(the line will break at any character)*/
+    border: 2px solid black;
+    width: 200px;
+    writing-mode: horizontal-tb;/* Horizontal-tb lines are written at default mode while vertical-rl lines are written vertically*/
+}
+
+
+
+
+
+
+
+
+
+
+
