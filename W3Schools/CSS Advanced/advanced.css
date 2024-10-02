@@ -265,6 +265,43 @@ div.test:hover{
     writing-mode: horizontal-tb;/* Horizontal-tb lines are written at default mode while vertical-rl lines are written vertically*/
 }
 
+/* USING 2D TRASNFORM
+1. TRANSLATE METHDO() - moves element from its current position*/
+
+.transform{
+    transform: translate(50px, 100px);
+    border: 2px solid black;
+    background-color: darkcyan;
+    color: black;
+    width: 300px;
+    height: 100px;
+    
+}
+/*2. rotate()method - rotaes the element at any degree specified clockwise or anti-clockwise*/
+.rotate{
+    transform: rotate(20deg);
+    border: 2px solid black;
+    width: 300px;
+    height: 100px;
+    background-color: yellow; 
+}
+/* 3. Scale Method increases and decreases the width and the height of an element*/
+.scale{
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    background-color: red;
+    color: black;
+    /*transform: scale(3,3); increases the size */
+    /*transform: scale(0.5, 0.5);decrease the elemnt and make it smaller in size in width and height*/
+}
+.scale{
+    transform: scaleX(2);/* increases and decreases the width of the element*/
+    transform: scaleY(1);/* increases and decreese the height of the element*/
+}
+
+
+
 
 
 
