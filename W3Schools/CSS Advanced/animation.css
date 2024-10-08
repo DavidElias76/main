@@ -1,0 +1,82 @@
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example; /*first is defining the animation name of the elements  to be styled*/
+    animation-duration: 4s;
+}
+/* the color changes from Red (the original color) to yellow and back to red*/
+@keyframes example{
+    from{background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+#example-2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example-2;
+    animation-duration: 4s;
+}
+
+/*using % to speecify keyframes direction*/
+@keyframes example-2 {
+    0%{background-color: red;}
+    25%{background-color: yellow;}
+    50%{background-color: blue;}
+    100%{background-color: green;}
+}
+
+/* removes the element fro the normal flow of the document and makes it move*/
+.example-3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example-3;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;/* value (INFINITE) make the animation run for ever without stopping*/
+    animation-direction: normal; /* other values include reverse, alternate , alternate -reverse*/
+    /*animation-play-state: running; other values are paused/running */
+}
+@keyframes example-3 {
+    0% {background-color: red; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: green; left: 0px; top: 200px;}
+    100% {background-color: red; left: 0px; top: 0px;}
+}
+
+div{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-weight: bold;
+    position: relative;
+    animation-name: mymove;
+}
+
+#div1{
+    animation-timing-function: linear;
+}
+#div2{
+    animation-timing-function: ease;
+}
+#div3{  
+    animation-timing-function: ease-in;
+}
+#div4{
+    animation-timing-function: ease-out;
+}
+#div5{
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes mymove{
+    from{left: 0px;}
+    to{left: 300px;}
+}
+

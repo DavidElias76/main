@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function adding(){
+            let a=document.frm.txt1.value;
+            let b=document.frm.txt2.value;
+            if(a==""){
+                alert("please enter first number to proceed");
+                document.frm.txt1.focus();
+            }
+            else if(b==""){
+                alert("please enter the second number to proceed");
+                document.frm.txt2.focus();
+            }
+            else{
+                let c=parseFloat(a)+parseFloat(b);
+                document.frm.txt3.value=c;
+            }
+        }
+        function subtract(){
+            let a=document.frm.txt1.value;
+            let b=document.frm.txt2.value;
+            if(a==""){
+                alert("enter the first number to procede");
+                document.frm.txt1.focus();
+            }
+            else if(b==""){
+                alert("enter the second number to proceed");
+                document.frm.txt2.focus();
+            }
+            else{
+                let c=parseFloat(a)-parseFloat(b);
+                document.frm.txt3.value=c;
+            }
+        }
+        function multiply(){
+            let a=document.frm.txt1.value;
+            let b=document.frm.txt2.value;
+            if(a==""){
+                alert("enter the first number to proceed");
+                document.frm.txt1.focus();
+            }
+            else if(b==""){
+                alert("enter the second number to proceed");
+                document.frm.txt2.focus();
+            }
+            else {
+                let c=parseFloat(a) * parseFloat(b);
+                document.frm.txt3.value=c;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- <input type="button" value="Click Me" onclick="dosomething()" width="200px" height="150px" style="background-color: red;"> -->
+    <br>
+    <br>
+    <fieldset>
+        <legend>Calculation Form</legend>
+        <br>
+        <form action="" method="" name="frm" autocomplete="off">
+            <label for="fname">First</label>
+            <input type="text" name="txt1">
+            <br>
+            <br>
+            <label for="second">Second</label>
+            <input type="text" name="txt2">
+            <br>
+            <br>
+            <label for="answ">Answer</label>
+            <input type="text" name="txt3">
+            <br>
+            <br>
+            <input type="button" value="Add" onclick="adding">
+            <input type="button" value="Subtract" onclick="subtract()">
+            <input type="button" value="MULTIPLY" onclick="multiply()">
+    </fieldset>
+
+    </form>
+</body>
+</html>

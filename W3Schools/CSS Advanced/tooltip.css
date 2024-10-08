@@ -1,0 +1,95 @@
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltiptext{
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    /* display: none; -You can use visibility property or the display property to style the tooltip   */
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+
+    /* Right tooltip
+    
+    left: 105%;
+    top: -5px;
+    */
+    /* Left Tooltip
+    
+    top: -5px;
+    right: 105%;
+    */
+
+
+    /*/Top tooltip */
+    
+    /*bottom: 100%; 
+    margin-left: -60px;
+    left: 50%;  /*use half of the width 120/2= 60px*/
+
+    /* bottom tooltip
+    
+    top: 100%;
+    margin-left: -60px;
+    left: 50%;
+    */
+
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    /* display: block; */
+}
+
+/* Use the tooltip Top, Bottom, Right and Left each and pseudo element ::after to create tooltip arrow */
+.tooltip .tooltiptext::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 5px;
+
+    /*top tooltip with bottom arrow
+    top: 100%;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-color: black transparent transparent transparent;
+    */
+
+    /* Bottom Tooltip with Top Arrow
+    bottom: 100%;
+    margin-left: -5px;
+    border-color: transparent transparent black transparent;
+    */
+
+    /* Right Tooltip with Left Arrow
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-color: transparent black transparent transparent;
+    */
+
+    /* Left Tooltip with Right Arrow 
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-color: transparent transparent transparent black;
+    */
+    
+}
+
+/* Css styling images */
+img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    margin: 25px;
+    background-color: white;
+    filter: grayscale(100%); /* Changes the visual effects of the element(like blur or saturatsion)*/
+}
+img:hover{
+    border: 2px solid lightblue;
+}
