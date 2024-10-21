@@ -84,12 +84,358 @@
 }
 
 /* Css styling images */
-img{
+.polaroid img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
     margin: 25px;
     background-color: white;
-    filter: grayscale(100%); /* Changes the visual effects of the element(like blur or saturatsion)*/
+    /* filter: grayscale(100%); Changes the visual effects of the element(like blur or saturatsion) */
 }
-img:hover{
+.polaroid img:hover{
     border: 2px solid lightblue;
+}
+
+
+/* Fade In Image Hover Overlay
+
+.container{
+    width: 50%;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background-color: rgb(55, 55, 177);
+    width: 100%; 
+    height: 100%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+    opacity: 0;
+}
+.text{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container:hover .overlay{
+    opacity: 1;
+}
+*/
+
+
+/* 2. Fade in box
+.container{
+    width: 50%;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+    opacity: 0;
+}
+.text{
+    color: white;
+    background-color: green;
+    padding: 16px 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+.container:hover .middle{
+    opacity: 0.7;
+}
+*/
+
+
+/* 3. Fade in from the (TOP) 
+.container{
+    position: relative;
+    width: 50%;
+    /* border: 1px solid black; 
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.top{
+    position: absolute;
+    bottom: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;/* height is set to 0 since you want it to be hovered going downwards
+    background-color: rgb(80, 80, 150);
+    overflow: hidden;
+    transition: .5s ease;
+
+}
+.text{
+    color: white;
+    position: absolute;
+    overflow: hidden; 
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.container:hover .top{
+    height: 100%;/* elememt is hovered going downwards
+}
+*/
+
+/* 4. Fade in from the Bottom 
+
+.container{
+    width: 50%;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(64, 64, 134);
+    overflow: hidden;
+    transition: .5s ease;
+    /* opacity: 0.7; makes it hover with opacity if wanted  
+}
+.text{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.container:hover .bottom{
+    height: 100%;
+}
+*/
+
+/* 5. Fade in form the Left
+.container{
+    width: 50%;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.left{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 100%;
+    background-color: rgb(50, 50, 102);
+    overflow: hidden;
+    transition: .5s ease;
+}
+.text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+.container:hover .left{
+    width: 100%;
+}
+*/
+
+/* 5. fade in from the right*/
+.container{
+    width: 50%;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(37, 37, 182);
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: .5s ease;
+}
+.text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    color: white;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+.container:hover .right{
+    width: 100%;
+}
+
+
+/* how to flip the image */
+.image-flip:hover{
+    transform: scaleX(-1);
+}
+
+/* styling an image when clicked  */
+
+
+
+
+/* IMAGE REFLECTION USING WEBKIT-BOX-REFLECT*/
+.image-mountains{
+    /* -webkit-box-reflect: below; other valuea are right/above/below */
+    -webkit-box-reflect: right 20px;/* create a gap btw image and the reflection*/
+    -webkit-box-reflect: right 20px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    /* linear-gradient creates a fade-out reflection */
+
+}
+
+/* OBJECT-FIT PROPERTY */
+
+.object-fit{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    /* fill - image will be stretched and squished to fit */
+    /* contain- image will keep the aspect raion but resize to fit given dimension */
+    /* cover- image will keep its aspect ratio will be clipped to fit gven dimension */
+    /* scale-down- image will cale down to smallest version fo none or contain */
+    /* none- image will not resize */
+    /* object-position: 5% 10%; */
+}
+
+
+/* CREATING A MASK IMAGE  */
+
+.mask1{
+    -webkit-mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp");
+    mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp");
+    mask-repeat: no-repeat;
+}
+.mask2{
+    /* -webkit-mask-image: linear-gradient(black, transparent); */
+    /* mask-image: linear-gradient(black, transparent); */
+
+    /* -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%); */
+    /* mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%); */
+
+    -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+    mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+
+.masked{
+    /* -webkit-mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp"); */
+    /* mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp"); */
+    /* mask-repeat: no-repeat; */
+    width: 150px;
+    height: 150px;
+    background: green;
+    border: 30px solid blue;
+    padding: 20px;
+    -webkit-mask-image: url("../images folder/circle-svgrepo-com.svg");
+    mask-image: url("../images folder/circle-svgrepo-com.svg");
+    mask-size: 100% 100%;
+}
+img{
+    mask-clip: padding-box;
+}
+
+.masked1{
+    width: 200px;
+    height: 200px;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    background-color: blue;
+    -webkit-mask-image: url("../images folder/rectangle-svgrepo-com.svg"), radial-gradient(transparent 50%, black);  
+    mask-image: url("../images folder/rectangle-svgrepo-com.svg"), radial-gradient(transparent 50%, black);
+}
+.masked1{
+    mask-composite: exclude;
+}
+
+#mask-1{
+    -webkit-mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp");
+    mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp");
+    mask-repeat: no-repeat;
+    mask-size: 50%;
+    mask-mode: luminance;
+}
+#mask-2{
+    -webkit-mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp");
+    mask-image: url("../images folder/htmlcss1-img_logo-shiptoit.webp");
+    mask-repeat: no-repeat;
+    mask-size: 50%;
+    mask-mode: alpha;
+
+}
+
+.masked3{
+    -webkit-mask-image: url("../images folder/circle-svgrepo-com.svg");
+    mask-image: url("../images folder/circle-svgrepo-com.svg");
+    mask-size: 30%;
+    mask-repeat: no-repeat;
+    background-color: green;
+    border: 30px solid blue;
+    padding: 20px;
+}
+.masked4{
+    mask-origin: stroke-box;
+
+}
+
+/* mask-type not running sice svg is not defined*/
+#mask1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: solid 1px black;
+    mask: url("#mask1");
+}
+#mask2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: solid 1px black;
+    mask: url("#mask2");
 }
