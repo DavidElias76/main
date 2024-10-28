@@ -1,0 +1,69 @@
+/* CSS FLEXBOX */
+
+.flex-container{
+    display: flex;
+    height: 600px;
+    /* height: 300px; */
+    background-color: dodgerblue;
+
+/* Flex-direction property */
+
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+
+}
+
+.flex-container > div{
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 10px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    line-height: 75px;
+}
+
+/* Flex-wrap Property */
+.flex-container{
+    flex-wrap: wrap;
+    /* flex-wrap: nowrap;-Default */
+    /* flex-wrap: wrap-reverse; */
+
+}
+
+/* CSS JUSTIFY-CONTENT */
+
+/*.flex-container{
+    /* justify-content: center; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between;
+
+}
+*/
+
+/* CSS ALIGN-ITEMS - add height to see how it works */
+
+/*.flex-container{
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: stretch; */
+    /* align-items: baseline;
+}
+*/
+
+/* CSS ALIGN-CONTENT */
+
+.flex-container{
+    /* align-content: space-between;  */
+    align-content: center;
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: space-around;*/
+}
+
+/* CSS FLEX-GROW */

@@ -1,0 +1,163 @@
+
+/* CSS PROPERTY RULE */
+@property --my-bg-color{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: lightgray;   
+}
+@property --my-txt-color{
+syntax: "<color>";
+inherits: true;
+initial-value: darkblue;
+}
+.property{
+width: 300px;
+height: 150px;
+padding: 15px;
+background-color: var(--my-bg-color);
+color: var(--my-txt-color);
+}
+
+/* Another example property rule with override 
+@property --my-bg-color{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: lightgray;
+}
+ div{
+    width: 300px;
+    height: 200px;
+    background-color: var(--my-bg-color);
+    padding: 20px;
+    display: inline-block;
+}
+.fresh{
+    animation: fresh linear .5s;
+    animation-iteration-count: 3;
+
+}
+@keyframes fresh{
+    0%{background-color: var(--my-bg-color);}
+    50%{background-color: #BC70A4;}
+    100%{background-color: aqua;}
+}
+.fresh{
+    --my-bg-color: #ff3647;/* local variable overrides the global variable
+}
+.nature{
+    --my-bg-color: rgb(120, 80, 30);
+} 
+*/
+
+/* Using @property to create animation style */
+@property --start-color{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgb(212, 105, 105);
+}
+@property --middle-color{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgb(97, 179, 97);
+
+}
+@property --end-color{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgb(137, 137, 218);
+
+}
+div{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    background-color: grey;
+    animation: div ease .3s;
+    animation-iteration-count: 3;
+}
+@keyframes div{
+    0%{background-color: var(--start-color);}
+    50%{background-color: var(--middle-color);}
+    100%{background-color: var(--end-color);}
+}
+
+
+
+/* MEDIA SCREEN AND MEDIA QUERIES */
+
+body{
+    background-color: pink;
+}
+/* condition is set when the width is 480px or wider the background-color changes from pink to lightgreen*/
+@media screen and (min-width:480px) {
+    body{
+        background-color: lightgreen;
+    }
+}
+
+/* condition is set when the width is 800px or wider the background-color changes from lightgreen to lavender */
+@media screen and (min-width:800px){
+    body{
+        background-color: lavender;
+    }
+}
+
+/* creating a link and adding media queries */
+
+ul{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: rgb(22, 21, 21);
+}
+li{
+    float: left;
+    /* display: inline-block; */
+}
+li a{
+    display: block;
+    padding: 14px 16px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+li a:hover{
+    background-color: grey;
+    color: black;
+}
+
+/* Condition is set - when the max width is 600px or less the FLOAT property changes from left to none and WIDTH becomes 100%  */
+@media screen and (max-width:600px){
+    li a{
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Using the Clear Property and Media Queries  */
+.column{
+    float: left;
+    width: 25%;
+    /* padding: 20px; */
+}
+/* clear float after the cloumns */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* condition is set when the width is 992px or less class column changes the width to 50% and go from 4 columns to 2 columns*/
+@media screen and (max-width: 992px){
+    .column{
+        width: 50%;
+    }
+}
+/* condition is set when the max-width is 600px or less the width is changes to 100%  and they stack upon each other */
+@media screen and (max-width: 600px){
+    .column{
+        width: 100%;
+    }
+}
+

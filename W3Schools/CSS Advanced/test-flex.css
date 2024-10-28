@@ -1,0 +1,26 @@
+*body{
+    box-sizing: border-box;
+}
+/* .flex-container>div{
+    background-color: #f1f1f1;
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+    line-height: 75px;
+    font-size: 30px;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(32, 32, 61);
+}
+ */
+
+ /*  */
+ ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+ 

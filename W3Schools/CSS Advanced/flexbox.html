@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexbox.css">
+    <title>Flexbox</title>
+</head>
+<body>
+    <div class="flex-container">
+        <!-- Order - changing the order of the flex items-->
+        <div style="order: 1;">1</div>
+        <div style="order: 2;">2</div>
+        <div>3</div>
+        <!-- Flex-grow - specifies how much flex item will grow relative to the rest of the flex items-->
+        <div style="flex-grow: 1;">4</div>
+        <div>5</div>
+        <div>6</div>
+        <!-- Flex-shrink - the div element will not shrink like the rest -->
+        <div style="flex-shrink: 0;">7</div>
+        <div>8</div>
+        <!-- Flex-basis - specifies initial length of the flex item -->
+        <div style="flex-basis: 200px;">9</div>
+        <div>10</div>
+        <!-- Flex property - flex-grow, flex-shrink, flex-basis -->
+        <div style="flex: 0 0 200px;">11</div>
+
+        <!-- align-self property specifies alignment of selected item isnide the flexible containers -->
+        <div style="align-self: center;">12</div>
+    </div>
+</body>
+</html>

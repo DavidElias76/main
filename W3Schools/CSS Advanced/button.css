@@ -201,3 +201,26 @@ h2{
 }
 
 
+/* CSS @PROPERTY RULE */
+
+
+
+
+
+@property --myColor{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: lightgray;
+}
+.property2{
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    background-color: var(--myColor);
+}
+.fresh{
+    --my-bg-color: #362b2c;
+}
+.nature{
+    --my-bg-color: rgb(120, 80, 30);
+}
