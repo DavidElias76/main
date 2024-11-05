@@ -1,0 +1,141 @@
+.grid-container{
+    display: grid;
+    background-color: #2196f9;
+    padding: 10px;
+    /* column-gap: 50px;gaps btw columns */
+    /* row-gap: 50px;gap btw rows */
+    gap: 10px;  /*styles gaps btw rows and columns*/
+}
+.grid-item{
+    background-color: grey;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-auto-columns: max-content;
+}
+.grid-item1{
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    background-color: grey;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.grid-item1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: grey;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-container>div{
+    background-color: grey;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Grid Area */
+/*item1{
+    grid-area: 2 / 1 / span 2 / span 3;
+    
+}
+*/
+/* changing the item name item name to relevant name eg: header and others    */
+.item1 { grid-area: header; } 
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container{
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer'
+}
+
+
+/* GRID-TEMPLATE PROPERTY */
+
+.grid-container{
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: 30px 200px auto 100px; */
+    grid-template-rows: 200px 100px;
+}
+
+
+/*JUSTIFY CONTENT PROPERTY - does not use height */
+/* .grid-container-2{ */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: center; 
+}
+*/
+.grid-container-2{
+    display: grid;
+    height: 400px;
+    grid-template-columns: 50px 50px 50px;/*make the grid smaller than the container - used by justify-content*/
+    grid-template-columns: auto auto auto auto;/*uses the align-content*/
+    background-color: rgb(71, 71, 224);
+    gap: 10px;
+    padding: 20px;
+
+
+}
+.grid-container-2>div{
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ALIGN-CONTENT - uses height */
+.grid-container-2{
+    /* align-content: space-evenly; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: start; */
+    align-content: center;
+    /* align-content: end; */
+}
+
+
+/* GRID-COLUMNS PROPERTY */
+.grid-container-3{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color: darkslategray;
+    padding: 20px;
+    gap: 10px;
+
+}
+.grid-container-3>div{
+    background-color: burlywood;
+    padding: 20px;
+    text-align: center;
+
+}
+.grid-items1{
+    grid-column: 1 / 5; /*grid-column-start (1) to grid-column-end (5)*/
+}
+.grid-items2{
+    grid-column: 1 / span 4;/*same as grid-column-start and grid-column-end*/
+}
+
+.grid-items4{
+    grid-row: 1 / 4;/*grid-row-start (1) to grid-row-end (4)*/
+}
+/* .grid-items5{
+    /* grid-row: 1 / span 4;same as grid-row-start and grid-row-end 
+}
+*/
+

@@ -16,11 +16,65 @@
 }
  */
 
- /*  */
- ul{
-    list-style-type: none;
+ /* Recap on image hovr overlay*/
+
+ /* CSS RESPONSIVE WEBSITE */
+body{
     margin: 0;
-    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+    background-color: grey;
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+.navbar{
+    background-color: rgb(31, 28, 28);
+    display: flex;
+}
+.navbar a{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: black;
+    color: white;
+}
+.row{
+    display: flex;
+    background-color: white;
+}
+.side{
+    background-color: #f1f1f1;
+    flex: 30%;
+    flex-wrap: wrap;
+}
+.main{
+    flex: 70%;
+    background-color: white;
+}
+.fakeimg{
+    /* background-color: #333; */
+    /* width: 100%; */
+    padding: 20px;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+}
+@media screen and (max-width: 700px) {/* if the max-width is 700px or smaller change the flex-direction to column*/
+    .row, .navbar{
+        flex-direction: column;
+    }
     
 }
- 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // if else statement
+
+        function calculatescore() {
+    let totalQuestions = 4;
+    let correctAnswers = 0;
+
+    // Retrieve answers and check if they are correct
+    if (document.querySelector('input[name="city"]:checked')?.value === "1") correctAnswers++;
+    if (document.querySelector('input[name="president"]:checked')?.value === "1") correctAnswers++;
+    if (document.querySelector('input[name="river"]:checked')?.value === "1") correctAnswers++;
+    if (document.querySelector('input[name="mountain"]:checked')?.value === "1") correctAnswers++;
+
+    // Calculate score percentage
+    let scorePercentage = (correctAnswers / totalQuestions) * 100;
+    document.getElementById('score').value = scorePercentage + "%";
+
+    // Determine remarks based on score
+    let remarks;
+    if (scorePercentage === 100) {
+        remarks = "Exceeded expectation";
+    } else if (scorePercentage >= 50 && scorePercentage < 100) {
+        remarks = "Met expectation";
+    } else if (scorePercentage >= 40 && scorePercentage < 50) {
+        remarks = "Approaching expectation";
+    } else {
+        remarks = "Below expectation";
+    }
+    document.getElementById('remarks').value = remarks;
+}
+</script>
+// do while loop
+
+function calculatescore() {
+    let totalQuestions = 4;
+    let correctAnswers = 0;
+    let questions = ["city", "president", "river", "mountain"];
+    let i = 0;
+
+    // Loop through each question using a do...while loop
+    do {
+        // Get the selected answer for each question
+        let answer = document.querySelector(`input[name="${questions[i]}"]:checked`);
+        
+        // Check if the selected answer is correct (value of "1")
+        if (answer && answer.value === "1") {
+            correctAnswers++;
+        }
+
+        i++;
+    } while (i < totalQuestions);
+
+    // Calculate the score percentage
+    let scorePercentage = (correctAnswers / totalQuestions) * 100;
+    document.getElementById('score').value = scorePercentage + "%";
+
+    // Determine remarks based on the score
+    let remarks;
+    if (scorePercentage === 100) {
+        remarks = "Exceeded expectation";
+    } else if (scorePercentage >= 50 && scorePercentage < 100) {
+        remarks = "Met expectation";
+    } else if (scorePercentage >= 40 && scorePercentage < 50) {
+        remarks = "Approaching expectation";
+    } else {
+        remarks = "Below expectation";
+    }
+    document.getElementById('remarks').value = remarks;
+}
+
+<script>
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

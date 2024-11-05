@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+
+}
+.body{
+    margin: 0;
+}
+.header{
+    border: 1px solid red;
+    padding: 10px;
+    text-align: center;
+    background-color: grey;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+/* All elements with a specific word "col-" will be styled*/
+[class*=col-]{
+    float: left;
+    padding: 25px;
+    border: 1px solid red;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+li{
+    background-color: rgb(113, 113, 168);
+    padding: 10px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+li:hover{
+    background-color: grey;
+}
+.aside{
+    background-color: blue;
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* FOR DESKTOPS *//*all elements inside class row are floated to the left*/
+@media only screen and (min-width: 768px){
+    .col-1{width: 8.33%;}
+    .col-2{width: 16.66%;}
+    .col-3{width: 25%;}/* class of col-3 and col-3-right - it will take 25%*/
+    .col-4{width: 33.33%;}
+    .col-5{width: 41.66%;}
+    .col-6{width: 50%;} /*class of col-6- it will take 50% width*/
+    .col-7{width: 58.33%;}
+    .col-8{width: 66.66%;}
+    .col-9{width: 75%;}
+    .col-10{width: 83.33%;}
+    .col-11{width: 91.66;}
+    .col-12{width: 100%;}
+}
+
+/* FOR MOBILE DEVICES */
+@media only screen and (max-width: 768px){
+    [class*="col-"]{
+        width: 100%;
+    }
+}
+
+/* FOR TABLETS DEVICES */
+@media only screen and (min-width: 600px){
+    .col-s-1{width: 8.33%;}
+    .col-s-2{width: 16.66%;}
+    .col-s-3{width: 25%;}/* Class col-s-3 for tablets takes width of 25%*/
+    .col-s-4{width: 33.33%;}
+    .col-s-5{width: 41.66%;}
+    .col-s-6{width: 50%;} 
+    .col-s-7{width: 58.33%;}
+    .col-s-8{width: 66.66%;}
+    .col-s-9{width: 75%;}/*class col-s-9 for tablets takes width of 75%*/
+    .col-s-10{width: 83.33%;}
+    .col-s-11{width: 91.66;}
+    .col-s-12{width: 100%;}/*class of col-s-12 for tablest takes the width of 100%*/
+
+}
+
+
+
