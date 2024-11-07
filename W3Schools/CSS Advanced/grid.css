@@ -71,8 +71,8 @@
 }
 
 
-/*JUSTIFY CONTENT PROPERTY - does not use height */
-/* .grid-container-2{ */
+/*JUSTIFY CONTENT PROPERTY - does not use height 
+.grid-container-2{
     /* justify-content: space-evenly; */
     /* justify-content: space-between; */
     /* justify-content: space-around; */
@@ -80,11 +80,11 @@
     /* justify-content: end; */
     /* justify-content: center; 
 }
-*/
+    */
 .grid-container-2{
     display: grid;
     height: 400px;
-    grid-template-columns: 50px 50px 50px;/*make the grid smaller than the container - used by justify-content*/
+    /* grid-template-columns: 50px 50px 50px;make the grid smaller than the container - used by justify-content */
     grid-template-columns: auto auto auto auto;/*uses the align-content*/
     background-color: rgb(71, 71, 224);
     gap: 10px;
@@ -104,8 +104,8 @@
     /* align-content: space-around; */
     /* align-content: space-between; */
     /* align-content: start; */
-    align-content: center;
-    /* align-content: end; */
+    /* align-content: center; */
+    align-content: end;
 }
 
 
@@ -138,4 +138,65 @@
     /* grid-row: 1 / span 4;same as grid-row-start and grid-row-end 
 }
 */
+
+
+/* GRID AREA PROPERTY */
+.grid-container-4{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    /* grid-template-rows: auto auto auto auto auto auto; - it creates 6 rows when number odf columns is specified correcttly*/
+    background-color: rgb(43, 40, 46); 
+    gap: 10px;
+    padding: 20px;
+
+}
+.grid-container-4>div{
+    background-color: coral;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+/* .grid8{
+    grid-area: 1 / 2 / 5 / 6;
+} */
+.grid6{
+    grid-area: 2 / 1 / span 2 / span 3; 
+}
+
+
+/* ORDER OF ITEMS */
+.grid-container-5{
+    background-color: crimson;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 20px;
+}
+.grid-container-5>div{
+    color: white;
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.g-1{ grid-area: 1 / 3 /  2 / 4;}
+.g-2{ grid-area: 2 / 3 / 3 / 4;}
+.g-3{ grid-area: 1 / 1 / 2 / 2;}
+.g-4{ grid-area: 1 / 2 / 2 / 3;}
+.g-5{ grid-area: 2 / 1 / 3 / 2;}
+.g-6{ grid-area: 2 / 2 /  3 / 3;}    
+
+
+/* you can use any of the classes in grid.html to style using Media Queries  */
+@media only screen and (max-width: 500px) {
+    .item1 { grid-area: 1 / span 3 / 2 / 4; }
+    .item2 { grid-area: 3 / 3 / 4 / 4; }
+    .item3 { grid-area: 2 / 1 / 3 / 2; }
+    .item4 { grid-area: 2 / 2 / span 2 / 3; }
+    .item5 { grid-area: 3 / 1 / 4 / 2; }
+    .item6 { grid-area: 2 / 3 / 3 / 4; }
+  }
+
+
+
 
