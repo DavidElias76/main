@@ -75,7 +75,50 @@ function calculatescore() {
     document.getElementById('remarks').value = remarks;
 }
 
-<script>
+<script> 
+// assignment 3 fuction using id  
+    let totalVolumeUsed = 0;
+            let trialCount = 0;
+
+        function calculate() {
+        // Get the input values
+        const initialVolume = parseFloat(document.getElementById("initialvolume").value);
+        const finalVolume = parseFloat(document.getElementById("finalvolume").value);
+
+        // Validate inputs to check if they are numbers
+        // if (isNaN(initialVolume) || isNaN(finalVolume)) {
+        //     alert("Please enter valid numbers for both initial and final volumes.");
+        //     return;
+        // }
+
+        // Check if final volume is less than initial volume
+        if (finalVolume < initialVolume) {
+            alert("Final volume cannot be less than initial volume.");
+            document.getElementById("finalvolume").focus(); // Set focus back to final volume
+        } else {
+            alert("Proceed to enter the total volume used.");
+
+            // Calculate volume used in the current trial
+            const volumeUsed = finalVolume - initialVolume;
+            document.getElementById("volumeused").value = volumeUsed.toFixed(2);
+
+            // Update the total volume and trial count
+            totalVolumeUsed += volumeUsed;
+            trialCount++;
+
+            // Display the results
+            document.getElementById("totalvolumeused").value = totalVolumeUsed.toFixed(2);
+            document.getElementById("trials").value = trialCount;
+
+            // Calculate and display the reaction endpoint
+            const endpoint = totalVolumeUsed / trialCount;
+            document.getElementById("endpoint").value = endpoint.toFixed(2);
+        }
+        }
+
+        
+        
+    </script>
 
 </script>
 
