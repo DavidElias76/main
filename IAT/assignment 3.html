@@ -10,6 +10,7 @@
         }
     </style>s
     <script>
+        let volumeUsed=0;
         let trialCounts=0;
         let maxTrials=5;
 
@@ -43,7 +44,7 @@
             document.frm.endpoint.value=f.toFixed(2);
             
             }  
-            function clear(){
+            function reset(){
             document.frm.initialvolume.value="";
             document.frm.finalvolume.value="";
             document.frm.volumeUsed.value="";
@@ -82,7 +83,7 @@
             <br>
             <br>
             <input type="button" value="Calculate" onclick="calculate()">
-            <input type="button" value="clear" onclick="clear()">
+            <input type="button" value="clear" onclick="reset()">
         </form>
     </fieldset>
 </body>

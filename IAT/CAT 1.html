@@ -1,0 +1,92 @@
+<?php
+$items = [
+    "item1" => 100,
+    "item2" => 200,
+    "item3" => 300
+];
+
+$receipt = "";
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["item"]) && isset($_POST["quantity"]) && isset($_POST["payment"])) {
+        $item = $_POST["item"];
+        $quantity = intval($_POST["quantity"]);
+        $payment = floatval($_POST["payment"]);
+        $vatRate = 0.16;
+
+        if (array_key_exists($item, $items)) {
+            $itemPrice = $items[$item];
+            $totalCost = ($itemPrice * $quantity) * (1 + $vatRate);
+
+            if ($payment >= $totalCost) {
+                $balance = $payment - $totalCost;
+                $receipt = "<h2>Receipt</h2>";
+                $receipt .= "<p>Item: " . htmlspecialchars($item) . "</p>";
+                $receipt .= "<p>Quantity: " . htmlspecialchars($quantity) . "</p>";
+                $receipt .= "<p>Total Cost (including VAT): Ksh " . number_format($totalCost, 2) . "</p>";
+                $receipt .= "<p>Payment: Ksh " . number_format($payment, 2) . "</p>";
+                $receipt .= "<p>Balance: Ksh " . number_format($balance, 2) . "</p>";
+            } else {
+                $error = "<p>Payment insufficient. You need Ksh " . number_format($totalCost - $payment, 2) . " more.</p>";
+            }
+        } else {
+            $error = "<p>Selected item not found.</p>";
+        }
+    } else {
+        $error = "<p>Error: Missing required form fields.</p>";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Purchase</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h2>Purchase Form</h2>
+        <form action="" method="POST">
+            <label for="item">Select Item:</label>
+            <select id="item" name="item" required>
+                <option value="item1">Item 1 - Ksh 100</option>
+                <option value="item2">Item 2 - Ksh 200</option>
+                <option value="item3">Item 3 - Ksh 300</option>
+            </select><br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required min="1"><br><br>
+
+            <label for="payment">Payment Amount:</label>
+            <input type="number" id="payment" name="payment" required min="0" step="0.01"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+
+    <?php
+    if ($receipt) {
+        echo $receipt;
+    } elseif ($error) {
+        echo $error;
+    }
+    ?>
+</body>
+</html>
