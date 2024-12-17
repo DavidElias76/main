@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+    <script>
+        // must be redone individually
+        
+        let attempts = 0; // Counter for operations performed
+
+        function calculateSum() {
+            // Get the values of the input fields
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+
+            // Validate input to ensure they are numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers!");
+                return;
+            }
+
+            // Calculate the sum
+            const sum = num1 + num2;
+
+            // Display the result in the text field
+            document.getElementById("result").value = sum;
+
+            // Increment and display the number of operations performed
+            attempts++;
+            document.getElementById("attempts").innerText = `Attempts: ${attempts}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Sum Calculator</h2>
+    <form>
+        <label for="number1">Enter First Number:</label>
+        <input type="text" id="number1" placeholder="Enter first number"><br><br>
+
+        <label for="number2">Enter Second Number:</label>
+        <input type="text" id="number2" placeholder="Enter second number"><br><br>
+
+        <button type="button" onclick="calculateSum()">Calculate Sum</button><br><br>
+
+        <label for="result">Result:</label>
+        <input type="text" id="result" readonly><br><br>
+    </form>
+
+    <p id="attempts">Attempts: 0</p>
+</body>
+</html>
