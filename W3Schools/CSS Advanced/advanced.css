@@ -25,9 +25,9 @@
 .image{
     border: 10px solid;
     border-image: url('../images folder/img_forest.jpg') 30 stretch;
-    border-image-slice: fill;/*other valuea are in % /number*/
-    border-image-width: 30px;
-    border-image-outset: 5px;
+    border-image-slice: fill;/* other values are number/percentage/fill*/
+    border-image-width: 30px;/* specifies the width of the border image - other values are number, length, percentage, auto*/
+    border-image-outset: 5px;/* specidies whether the image should be inside or outside the border - values are number, length and border-box*/
     border-image-repeat: repeat;/* other values are stretch/repeat/round/space*/
     padding: 20px;
     text-align: center;
@@ -65,33 +65,35 @@ background-image: url("../images folder/img_mountains.jpg"), url("../images fold
 /* 1 .LINEAR GRADIENT COLOR - you can use multiple color for linear gradient*/
 
 #grad-1{
-    /*background-image: linear-gradient(red, yellow); direction for TOP to BOTTOM*/
-    /*background-image: linear-gradient(to right, red, yellow); Direction from LEFT TO RIGHT*/
-    /*background-image: linear-gradient(to bottom right, red, yellow); Drection from TOP LEFT TO BOTTOM RIGHT/ TOP RIGHT TO BOTTOM LEFT*/
+    /* background-image: linear-gradient(red, yellow); /*direction for TOP to BOTTOM */
+    /* background-image: linear-gradient(to right, red, yellow); /*Direction from LEFT TO RIGHT */
+    /* background-image: linear-gradient(to bottom right, red, yellow); Drection from TOP LEFT TO BOTTOM RIGHT/ TOP RIGHT TO BOTTOM LEFT */
     height: 200px;
 }
 /*USING THE ANGLES IN LINEAR GRADIENTS
 #grad-1{
-    /*background-image: linear-gradient(180deg, red, yellow);*/
+    /*background-image: linear-gradient(180deg, red, yellow); - straight line*/
      /* you can use other deg values like:
      - 0deg is equivalent to "to top" direction
      - 90deg is eqivalent to "to right" direction
      - 180deg is equivalent to "to bottom" direction
 }
 */
-/* USING MULTIPLE COLORS STOPS
+/*USING MULTIPLE COLORS STOPS
 #grad-1{
-    background-image: linear-gradient(to right, red, orange,yellow, green,blue,indigo, violet);
+    /* background-image: linear-gradient(to right, red, orange,yellow, green,blue,indigo, violet);
 }
 */
 
-/* USING TRASPARENCY/OPACITY
+
+/* USING TRASPARENCY/OPACITY IN GRADIENTS
 #grad-1{
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*red color with opacity 0, red color with opacity 1
 }
 */
 
-/* REPEATING-LINEAR-GRADIENT
+
+/* REPEATING-LINEAR-GRADIENTS- repeating radial colors
 #grad-1{
     background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
 }
@@ -116,31 +118,37 @@ background-image: url("../images folder/img_mountains.jpg"), url("../images fold
     background-image: radial-gradient(circle, red, yellow, green); /* shapes can be circle/rectangle/square
 
 } 
-*/
+    */
+
 /*Using different keywords
 #grad-1{
-    background-image: radial-gradient(closest-side at 60% 50%, red, yellow, black);
+    /* background-image: radial-gradient(closest-side at 60% 50%, red, yellow, black); */
+    /* background-image: radial-gradient(farthest-side at 60% 50%, red, yellow, black); */
+    /* background-image: radial-gradient(closest-corner at 60% 50%, red, yellow, black); */
+    /* background-image: radial-gradient(farthest-corner at 60% 50%, red, yellow, black);
+
 }
 */
 
-/* repeating radial gradient
+/*REPEATING RADIAL GRADIENT
 #grad-1{
-    background-image: radial-gradient(red, yellow 10%, green 15%);
+    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
 }
 */
 
 
 /* 3. CONIC GRADIENTS*/
 
-/*Position around a center point - 0degree=center point
+/*Position/rotated around a center point - 0degree=center point
 #grad-1{
-    background-color: red;
+    /* background-color: red;
     background-image: conic-gradient(red, yellow, green);
-    width: 200px;
+    width: 400px;
 }
 */
 
-/* Using three different colors and degrees
+
+/*Using three different colors and degrees
 #grad-1{
     background-image: conic-gradient(red 45deg, yellow 90deg, green 120deg);
 }
@@ -148,13 +156,14 @@ background-image: url("../images folder/img_mountains.jpg"), url("../images fold
 
 /* creating a Pie Chart*/
 
-/* Adding border radius property to make it look like a pie chart
+/*Adding border radius property to make it look like a pie chart*/
 #grad-1{
     background-image: conic-gradient(red, yellow, green, blue, black);
     border-radius: 50%;
     width: 200px;
 }
-*/
+
+
 /* Creating a pie chart using different colors and degrees
 #grad-1{
     background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg,green 270deg, blue 270deg);
@@ -170,14 +179,18 @@ background-image: url("../images folder/img_mountains.jpg"), url("../images fold
 }
 */
 /* Repaeting a conic gradient*/
-#grad-1{
+/* #grad-1{
     background-image: repeating-conic-gradient( red 10%, yellow 20%);
     border-radius: 50%;
     width: 200px;
-}
+} */
+
+
 
 /*CSS TETX SHADOW EFFECTS*/
-/*1. TEXT SHADOW
+
+
+/* 1. TEXT SHADOW
 h3{
     text-shadow: 2px 2px red;
 }
@@ -265,6 +278,18 @@ div.test:hover{
     writing-mode: horizontal-tb;/* Horizontal-tb lines are written at default mode while vertical-rl lines are written vertically*/
 }
 
+
+
+/*CSS WEB FONTS AND USING FONTFACE PROPERTY
+
+@font-face {
+    font-family: myFirstFont;
+    src: url( URL OF THE FONT FILE);
+}
+*/
+
+
+
 /* USING 2D TRASNFORM
 
 
@@ -280,7 +305,7 @@ div.test:hover{
 }
 /*2. rotate()method - rotaes the element at any degree specified clockwise or anti-clockwise*/
 .rotate{
-    /*transform: rotate(20deg);*/
+    /* transform: rotate(20deg); */
     border: 2px solid black;
     width: 300px;
     height: 100px;
@@ -414,11 +439,12 @@ div.test:hover{
     width: 100px;
     height: 50px;
     padding: 20px;
-    transition: width 2s;
+    transition: width 2s; /*specifies the property to be transitioned and the duration of the transition*/
     transition-delay: 1s;
 }
 .transitions:hover{
     width: 300px;
+    background-color: chocolate;
 }
 .transitions{
     /* transition-timing-function: linear; */
@@ -433,13 +459,13 @@ div.test:hover{
     border: 2px solid black;
     width: 100px;
     height: 50px;
-    transition: width 2s, height 2s, transform 2s;
+    transition: width 2s, height 2s, transform 2s; /* specifies the tarnsform property to be used with the transition prpoerty*/
     background-color: red;
 }
 .transform-transition:hover{
     width: 300px;
     height: 200px;
-    transform: rotate(45deg);
+    transform: rotate(45deg);/* use transform rotate property when hovered*/
 }
 
 

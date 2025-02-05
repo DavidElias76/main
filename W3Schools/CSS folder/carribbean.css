@@ -62,7 +62,7 @@ img{
 /* how to style float and clear property*/
 
 .blob-container{
-    float: right;/* used for formatting and positioning of content. has values like left and right or none*/
+    float: left;/* used for formatting and positioning of content. has values like left and right or none*/
     clear: left;
 
 }

@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    font-family: 'roboto'sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+.navigation{
+    background-color: rgb(26, 24, 24);
+    
+
+}
+.nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 16px;
+}
+.nav li{
+    list-style-type: none;
+    overflow: hidden;
+    /* margin: 20px; */
+    /* float: left; */
+    /* background-color: coral; */
+    /* margin: 0; */
+
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    /* position: sticky; */
+    /* top: 0; */
+    /* width: 100%; */
+    background-color: rgb(97, 96, 96);
+    /* position: fixed; */
+    margin: 0;
+    /* padding: 20px; */
+}
+li a:hover{
+    background-color: chocolate;
+}
+
+.clearfix::after{
+    clear: both;
+    display: table;
+    content: "";
+}
+.clearfix{
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
+    margin: 100px;
+}
+.btn{
+    padding: 15px;
+    width: 200px;
+    color: black;
+    font: bold;
+    background-color: green;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px 3px green;
+}
+.btn:hover{
+    background-color: darkgreen;
+}
+.about{
+    margin: 100px;
+    height: 250px;
+}
+.projects{
+    background-color: black;
+    height: 400px;
+    color: white;
+}
+.prj{
+    margin: 100px;
+
+}
+.skills{
+    display: flex;
+
+}
+
+
+.skl{
+    margin: 100px;
+}
+.skl li{
+    padding: 20px;
+    justify-content: space-between;
+}
+.contact{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 500px;
+}
+[type]{
+    width: 250px;
+    margin: 0;
+    align-items: flex-start;
+
+}

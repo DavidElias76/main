@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;/*  repeat-x for horizontall and repeat-y for vertically - or no repeat*/
     background-attachment: scroll;/* can be fixed or scroll*/
     background-size: auto;/* can be auto, contain or cover*/
+    /* box-sizing: padding-box; - can take other values like border-box and content-box*/
     
 
     /* background-origin can also be used to specify position of the image
@@ -15,6 +16,7 @@ body{
 /* linked table.html with pirates.css and styling begins*/
 
 table, th, td {
+    /* margin: collapse; - top and bottom elements collapse into a single margin equal to the largest two margins*/
     border-style: dotted solid double dashed; /* the top border will be dotted, right will be solid, bottom will be double, and left will be double*/
     border-width: 2px; /* to specify the width of the borders the (top-right-bottom-left)*/   
     border-collapse: collapse;

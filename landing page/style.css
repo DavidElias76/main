@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.navigation{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 1rem 10%;
+    background-color: transparent;
+    filter: drop-shadow(20px);
+    /* filter: drop-shadow(10px); */
+    z-index: 100;
+    gap: 2rem;
+
+}
+.logo{
+    color: #a6673d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 3rem;
+    transition: 0.5s ease;
+    /* display: block; */
+    /* border-bottom: 2px solid transparent; */
+}
+nav a:hover,
+nav a.active{
+    color: #a6673d;
+    /* border-bottom: 2px solid #f9f9f9; */
+}
+
+  /* hero section */
+
+.hero {
+    background-image: url("/landing page/images folder/coffee image 1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: 100% 100%;
+    background-attachment: scroll;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2,
+.hero p,
+.hero a {
+    display: block;
+    margin: 10px 0;
+}
+.hero h2{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    font-size: 3rem;
+    font-weight: 400;
+}
+.hero p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.hero .btn{
+    background-color: #c27c47;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.hero .btn:hover{
+    background-color:  #a6673d;
+    transform: scale(1.05);
+}
+.about-section{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+}
+
+/* About section */
+
+.about {
+    line-height: 1.8;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about-img img {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1rem;
+    font-weight: normal;
+    word-wrap: normal;
+    line-height: 1.6;
+}
+
+/* features section */
+
+.features{
+    height: 130vh;
+    background-color: beige;
+}
+
+.text h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 2rem;
+
+}
+img{
+    width: 40vw;
+    height: 70vh;
+    object-fit: contain;
+    transition: all 0.5s ease;
+    max-width: 200%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+
+    
+} 
+img:hover{
+    transform: scale(1.05);
+}
+ .feats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem;
+    gap: 3rem;
+}
+/* flex-wrap: wrap; */
+.feature{
+    text-align: center;
+    padding: 1rem;
+}
+
+.feature h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.8;
+    word-wrap: normal;
+
+}
+.feature p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.feature {
+    background-color: beige;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact{
+    height: 70vh;
+    background-color: #333;
+}
+.conts h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*adding flex direction to chamge items from row to column*/
+}
+[type]{
+    width: 25vw;
+    height: 8vh;
+    padding: 15px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+textarea{
+    width: 25vw;
+    height: 10vh;
+    border: none;
+    outline: none;
+    padding-inline: 10px;
+}
+button{
+    background-color: #c27c47;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    width: 10vw;
+    border: none;
+
+}
+
+/* Responsive web design */
+
+/* Responsive Design */
+
+/* Smartphones */
+
+
+/* styles for Smartphones */
+@media screen and (max-width: 480px) {
+    .navigation {
+        display: none;
+    }
+
+    .hero {
+        background-position: 65%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+        transform: translateY(-100px);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn {
+        font-size: 1rem;
+        padding: 0.8rem;
+        font-weight: bold;
+    }
+
+    .about-text {
+        max-width: none;
+        padding: 0.5rem;
+        margin-top: 0 auto;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .about-img img {
+        margin-top: 0;
+    }
+
+    .features {
+        height: 100vh;
+    }
+
+    .feats {
+        display: block;
+        margin: 1rem;
+        gap: 1rem;
+    }
+
+    .feature h3,
+    .feature p {
+        padding: 0.5rem;
+        font-weight: bold;
+    }
+
+    .feature img {
+        width: 100%;
+        height: auto;
+    }
+
+    form [type],
+    textarea {
+        width: 80vw;
+    }
+
+    button {
+        width: 40vw;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .navigation {
+        padding: 1rem 5%;
+    }
+
+    nav a {
+        margin-left: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .hero .btn {
+        font-size: 1.2rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .about-text {
+        max-width: 500px;
+    }
+    
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    .about-img img {
+        max-width: 500px;
+    }
+
+    .feats {
+        flex-wrap: wrap;
+        margin: 2rem;
+        gap: 2rem;
+    }
+    .features{
+        height: 60vh;
+    }
+    .feature {
+        flex: 1 1 45%;
+        margin-bottom: 1rem;
+    }
+    .feature h3,
+    .feature p{
+        font-size: 1.3rem;
+    }
+
+    form [type],
+    textarea {
+        width: 50vw;
+    }
+
+    button {
+        width: 20vw;
+        font-size: 1.3rem;
+    }
+    .contact{
+        height: 50vh;
+    }
+    [type]{
+        font-size: 1.2rem;
+    }
+    
+    
+    textarea{
+        font-size: 1.2rem;
+
+    }
+
+
+}

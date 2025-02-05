@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navigation{
+    /* background-color: grey; */
+    background-image: url("../David's Images/u6nu4an7hbmrxn19supd.jpg");
+    background-position: fixed;
+    background-attachment: fixed;
+    height: 600px;
+
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    /* background-color: darkgray; */
+    backdrop-filter: blur(50px); /* used to add transparency to the background */
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+li a{
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: rgb(194, 145, 145);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
+        z-index: 1;
+        padding: 14px;
+    }
+    .dropdown-content a{
+        display: block;
+        color: black;
+        text-decoration: none;
+        background-color: rgb(194, 145, 145);
+}
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
+a:hover{
+    background-color: blueviolet;
+}
+.download{
+    background-color: rgb(120, 120, 236);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+
+}
+/* .head{
+    font-size: 3em;
+
+}
+.text{
+    font-size: 3em;
+} */
+.header{
+    margin: 150px;
+    /* text-align: center; */ 
+}
+/* .para
+{
+    font-size: 1.3em;
+    font-weight: bold;
+} */
+.about{
+    margin: 150px;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+.column{
+    /* border: 1px solid black; */
+    padding: 20px;
+    width: 30vw;
+    line-height: 1.4;
+    word-wrap: break-word;
+    text-overflow: clip;
+}
+.services{
+    text-align: center;
+    word-wrap: break-word;
+    width: 50%;
+    margin: 0 auto;
+}
+.blocks{
+    display: flex;
+    justify-content: space-around;
+    margin: 150px;
+    line-height: 1.5;
+}
+.block-1{
+    align-items: center;
+    width: 30vw;
+    padding: 20px;
+    border: 1px solid blue;
+    margin-right: 10px;
+}

@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+.grid-container{
+    display: grid;
+    background-color: aqua;
+    padding: 10px;
+    gap: 10px;
+    /*grid-template-columns: auto auto auto auto auto; /*means that i get 5 columns in the grid-container and they fit in size
+    grid-template-rows: auto auto auto auto auto; means i get 5 rows in a diiv container
+*/
+
+
+}
+
+
+
+/* selecting all elemnts with the word grid */
+[class*=grid]{
+    color: brown;
+    /* width: 200px;
+    height: 200px; */
+    padding: 20px;
+    background-color: grey;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+/* grid line property - requires grid-template-columns */
+
+/* .grid-1{
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+/* grid line reqiures the grid-template-row
+
+.grid-5{
+    grid-row-start: 2;
+    grid-row-end: 5;
+} 
+
+/* .grid-1{
+    grid-area: grid-row-start grid-row-end grid-column-start grid-column-end;
+    }
+    
+    */
+.grid-container{
+    grid-template-areas: 
+    'myArea myArea myArea ..'
+    'myArea myArea myArea ..'
+    /* 'myArea myArea myArea ..' */
+    ;
+
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+
+
+
+    /*you can specify the size of the column and row using template columns and row
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+*/
+}
+
+.grid-1{grid-area: myArea;}
+
+
+
+.container{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
+    /*Defines the grid staructure*/
+    grid-template-columns: auto auto auto auto auto; /**/
+    /* grid-template-rows: 200px 100px; */
+
+
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer'
+
+}
+.grid1{grid-area: header;}
+.grid2{grid-area: menu;}
+.grid3{grid-area: main;}
+.grid4{grid-area: right;}
+.grid5{grid-area: footer;}
+
+
+/* gri */
+
+
+
+.grid-container-2{
+    display: grid;
+    grid-template-columns: auto auto auto auto; /*defines grid structure*/
+    grid-auto-columns: 500px;
+    grid-auto-rows: 50px;
+    height: 600px;
+    gap: 20px;
+
+    /* justify property */
+    justify-content: space-around;
+
+    /* align-content property */
+    align-content: center;
+}
+.grid-container-2>div{
+    border: 1px solid black;
+    padding: 10px;
+
+
+}
+
+
+
+
+
+
+
+

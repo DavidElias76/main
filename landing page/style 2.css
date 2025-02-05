@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+
+}
+/*  using property rule */
+:root{
+    --main-color: #deab5f;
+    --primary-color: #312e2e;
+}
+/* utility */
+button{
+    padding: 10px 30px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+
+}
+/* resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #100e0f;
+
+}
+
+/* navigations */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 15px;
+}
+
+li{
+    display: inline;
+    list-style: none;
+
+
+}
+li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    padding-bottom: 10px;
+    transition: all 0.5s ease;/*check more about transtion*/ 
+}
+
+li a:hover{
+    border-bottom: 2px solid #deab5f;
+}
+
+/* nav end */
+
+/* Header section */
+.header{
+    background-image: url("./images folder/git\ image\ 6.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    text-align: center;
+
+}
+/* main-headings*/
+.main-headings{
+    position: absolute; /*using position*/
+    top: 7rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+}
+
+/* primary heading */
+.primary-heading{
+    position: absolute;
+    bottom: 4rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+    margin-bottom: -40px;
+}
+
+/* main btn */
+.main-btn{
+    position: absolute;
+    bottom: 2rem;
+    padding: 10px 30px;
+    margin-top: 20px;
+    background: transparent;
+    background-color: var(--main-color);
+    transform: translateY(60px);
+}
+
+/* section */
+
+#our-story{
+    height: 100vh;
+    margin-top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.img{
+    width: 400px;
+    height: 400px;
+    background-image: url("./images folder/git\ image\ 5.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* content */
+
+.title-style{
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Playfair Display', serif;
+    color: white;
+    transform: translateX(-100px);
+    font-size: 4rem;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    transform: translateX(-120px);
+}
+
+.section-content  p{
+    max-width: 500px;
+    color: white;
+    font-family: sans-serif;
+    line-height: 20px;
+    margin: 20px 0;
+}
+
+/* coffee-container */
+
+.coffee-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+
+}
+.img2{
+    width: 400px;
+    height: 400px;
+}
+.title2{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+.content-section p{
+    max-width: 500px;
+    color: white;
+
+}
+/* end of coffee container */
+
+/* products scection container */
+
+.products{
+    margin-top: 5rem;
+}
+.title3{
+    margin-left: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    font-size: 4rem;
+    color: white;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    border: 2px solid var(--main-color);
+    padding: 0 20px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.card-img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -60px;
+    /* border: 2px solid var(--main-color); */
+}
+
+.img1{
+    background-image: url("./images folder/git\ image\ 1.png");
+    background-position: center;
+    background-size: cover;
+
+}
+.img2{
+    background-image: url("./images folder/git\ image\ 2.png");
+    background-position: center;
+    background-size: cover;
+
+}
+.img3{
+    background-image: url("./images folder/git\ image\ 3.png");
+    background-position: center;
+    background-size: cover;
+
+}
+.card-title{
+    color: white;
+    font-family: sans-serif;
+    margin-top: 50px;
+
+}
+.card .items p{
+    color: white;
+    margin-top: 20px;
+    font-family: sans-serif;
+
+}
+
+/* Products end */
+
+footer{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+}
+footer .container{
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+footer.heading-info{
+    margin-bottom: 20px;
+
+}
+
+footer p{
+    line-height: 25px;
+
+}
+span{
+    color: var(--main-color);
+}
+hr{
+    margin-bottom: 20px;
+    border: var(--main-color);
+    width: 500px;
+    margin: 0 auto;
+}
+.para{
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* responsiveness */
+
+/* Mobile phones */
+
+@media screen and (max-width: 481px){
+    body{
+        overflow-x: hidden;
+    }
+    .main-headings, .primary-heading{
+        font-size: 2.5rem;
+    }
+
+    #our-story{
+        text-align: center;
+    }
+    #our-story .title{
+        /* text-align: center; */
+        transform: translatex(50px);
+    }
+    
+    .line{
+        display: none;
+
+    }
+    .coffee-container{
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+    }
+    .title2{
+        text-align: center;
+    }
+    .content-section p{
+        text-align: center;
+    }
+    .section-content p{
+        flex-wrap: wrap;
+        max-width: 400px;
+    }
+    .btn3{
+        margin: 3rem auto;
+        text-align: center;
+    }
+
+    .image-container img{
+        margin-left: 2rem;
+    }
+
+    .title3{
+        margin: 10rem 0;
+        text-align: center;
+    }
+    .card-title{
+        margin-left: -2rem;
+    }
+
+}
+
+/* for desktop devices */

@@ -1,4 +1,9 @@
 
+
+body{
+    margin: 0;
+
+}
     /* CREATING A HORIZONTAL NAVIGATION
 
 ul{
@@ -103,12 +108,14 @@ ul{
     background-color: #333;
     margin: 0;
     padding: 0;
-    overflow: hidden;/* changes the overflow of the content in a horizontal nav bar*/
+    overflow: hidden;/*changes the overflow of the content in a horizontal nav bar*/
+    display: flex;
+    justify-content: space-evenly;
 
 }
-li{
-    float: left;/* making item appear inline and float to the left*/
-}
+/* li{
+    float: left;/* making item appear inline and float to the left
+} */
 li a{
     color: white;
     text-decoration: none;
@@ -137,7 +144,7 @@ li a:hover{
     color: black;
     text-decoration: none;
 }
-.dropbtn:hover .dropdown-content{
+.dropdown:hover .dropdown-content{
     display: block;
 }
 

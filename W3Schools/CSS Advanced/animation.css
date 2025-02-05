@@ -3,15 +3,17 @@ div{
     width: 100px;
     height: 100px;
     background-color: red;
-    animation-name: example; /*first is defining the animation name of the elements  to be styled*/
+    animation-name: example; /*first is defining the animation name of the elements to be styled*/
     animation-duration: 4s;
 }
 /* the color changes from Red (the original color) to yellow and back to red*/
+
 @keyframes example{
     from{background-color: red;}
     to {background-color: yellow;}
 }
 
+/*you can also use the same class or id as an animation name*/
 
 #example-2{
     width: 100px;
@@ -29,13 +31,13 @@ div{
     100%{background-color: green;}
 }
 
-/* removes the element fro the normal flow of the document and makes it move*/
+/* removes the element from the normal flow of the document and makes it move*/
 .example-3{
     width: 100px;
     height: 100px;
     background-color: red;
     position: relative;
-    animation-name: example-3;
+    animation-name: example-3; /*animation name*/
     animation-duration: 4s;
     animation-delay: 2s;
     animation-iteration-count: 3;/* value (INFINITE) make the animation run for ever without stopping*/

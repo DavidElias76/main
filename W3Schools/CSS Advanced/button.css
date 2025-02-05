@@ -123,7 +123,7 @@
     color: white;
     border-radius: 5px;
 }
-.pagination a:hover:not(.active){
+.pagination a:hover:not(.active){/*background-color when the link is not active*/
     background-color: #ddd;
     border-radius: 5px;
 }
@@ -159,7 +159,7 @@ li a{
     column-gap: 40px;/* specifies the gap btw columns*/
     column-rule-style: solid;/* specifies of the style of the columns*/
     column-rule-width: 1px;/* specifies the width style btw columns*/
-    column-span: all;
+    column-span: all;/*specifies how may times a columns should span across */
     column-width: 100px; 
 }
 
