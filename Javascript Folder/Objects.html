@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javacsript Objects</title>
+</head>
+<body>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+    <p id="demo34"></p>
+    <p id="demo35"></p>
+    <p id="demo36"></p>
+    <p id="demo37"></p>
+    <p id="demo38"></p>
+    <p id="demo39"></p>
+    <p id="demo40"></p>
+
+    <!-- JAVASCRIPT METHODS -->
+
+    <button onclick="document.getElementById('demo39').innerHTML = Date()">The date today is</button>
+    
+    
+
+
+<!-- javascript objects -->
+
+    <script>
+
+        // create an object with type
+
+        const car= {type: "fiat", model: "500", color: "white"};
+
+        // display data  from the objectS
+
+        document.getElementById("demo1").innerHTML = "The car type is: " + car.type;
+        document.getElementById("demo1").innerHTML = "The car model is: " + car.model;
+        document.getElementById("demo1").innerHTML = "The car color is: " + car.color;
+
+
+
+        // Another way to create a javascript object
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "white"
+        };
+
+        document.getElementById("demo2").innerHTML = person.firstName + " " + person.lastName + " has " + person.eyeColor +  " color eyes" ;
+
+
+        // Another way of creating an object
+
+        // Create an Object
+        const pupil = {};
+
+        // Add Properties
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+
+
+        document.getElementById("demo3").innerHTML= person.firstName + " " + person.lastName + " is " + person.age + " and has " + person.eyeColor + " eyes" ;
+
+
+        
+        // OBJECT METHODS 
+
+        const girl = {
+            firstName: "Mary",
+            lastName: "Ann",
+            age: 30,
+            eyeColor: "green",
+            fullName: function(){
+
+                return this.firstName + " " + this.lastName + " is " + this.age + " years old and she has " + this.eyeColor + " color eyes" ;
+            }
+        };
+        document.getElementById("demo4").innerHTML = girl.fullName();
+        
+        
+        // Javascript Objects are Mutable - they are addressed by reference and not by value
+
+        const you = {
+            firstName: "Tim",
+            lastName: "Hover",
+            age: 25,
+            eyeColor: "blue"
+        };
+
+        // create a copy by reference
+        const x = person; // an changes made on object x will be reflected on object person
+
+        // Change age
+        x.age = 10; // the new value of age becomes 10
+
+        document.getElementById("demo5").innerHTML = person.firstName + " is " + person.age + " years old ";
+
+
+
+        // JAVASCRIPT OBJECT PROPERTIES
+
+        const student = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 20
+        };
+
+        // Assignning a variable to object name
+        let m = "firstName";
+        let n = "lastName";
+        let o = "age";
+        
+        document.getElementById("demo6").innerHTML =  student[m] + " " + student[n] + " is " + person[o] + " years old";
+
+
+        // ADDING A NEW OBJECT VALUE
+
+        const teacher = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 25
+        };
+
+        // adding a new object name and value value to the object
+
+        teacher.nationality = "English";
+
+        document.getElementById("demo7").innerHTML = teacher.firstName + " "  +  teacher.lastName + " is " + teacher.nationality;
+
+        
+        
+        // DELETING AN OBJECT
+        
+        const pop = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 25,
+            nationality: "English"
+        };
+
+        // deleting an object
+        delete pop.age;     //becomes undefined
+
+        document.getElementById("demo8").innerHTML = pop.firstName +  " " + pop.lastName + " is " + pop.age + " years old";
+
+
+
+
+        // CREATING A NESTED OBJECTS
+
+        const myObj = {
+            name: "John",
+            age: 30,
+            myCars: {
+                car1: "FORD",
+                car2: "BMW",
+                car3: "FIAT"
+            }
+        };
+
+        //  print out the nested objects
+
+        document.getElementById("demo9").innerHTML = "The first car is: " + myObj.myCars.car1;
+        document.getElementById("demo10").innerHTML = "The Second car is: " + myObj.myCars.car2;
+        document.getElementById("demo11").innerHTML = "The third car is: " +  myObj.myCars.car3;
+
+
+
+        // JAVASCRIPT OBJECTS METHODS
+        
+        // OBJECT METHODS 
+
+        const pope = {
+            firstName: "Mary",
+            lastName: "Ann",
+            age: 30,
+            eyeColor: "green",
+            fullName: function(){
+                return this.firstName + " " + this.lastName + " is " + this.age + " years old and she has " + this.eyeColor + " color eyes" ;
+            }
+        };
+        document.getElementById("demo12").innerHTML = pope.fullName();
+
+
+        // ADDING A METHOD TO AN OBJECT
+
+        const saviour = {
+            firstName: "Mary",
+            lastName: "Ann",
+            age: 30,
+            eyeColor: "green"
+        };
+
+        // ading a new method to an object
+        saviour.name = function(){
+            return (this.firstName + " " + this.lastName).toUpperCase(); // the name will be printed in uppercase letters
+        }
+
+        document.getElementById("demo13").innerHTML = "Her name is: " + saviour.name();
+
+
+
+        // JAVASCRIPT DISPLAYING AN OBJECT
+
+        const prisonInmate = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+            document.getElementById("demo14").innerHTML = prisonInmate; // the result will be [object] [object]
+
+
+            // 1. by name
+
+            document.getElementById("demo15").innerHTML = prisonInmate.name + " , " + prisonInmate.age + " , " +  prisonInmate.city;
+
+
+            // 2. in loop - to be revisited
+
+            let text = " ";
+            for (let x in prisonInmate){
+
+                text = text + prisonInmate[x] + " ";
+                // text += prisonInmate[x] + " ";
+                
+            };
+
+            document.getElementById("demo16").innerHTML =text;
+
+
+            // 3. USING object.values() to create an Array
+
+            // create an array
+
+           
+            const myArray = Object.values(prisonInmate);
+
+            document.getElementById("demo17").innerHTML  = myArray;
+
+
+            // 4. USING object.entries()
+
+            const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+
+            let text2 = " ";
+
+            for (let [fruit, amount] of Object.entries(fruits)) {
+                
+                text2 += fruit + ": " + amount + "<br>";
+            }
+
+            document.getElementById("demo18").innerHTML = text2;
+
+
+            // 5. USING JSON.STRINGIFY() METHOD -The result wiil be a string written im JSON notation
+            
+            // Stringify Object
+
+            let myString = JSON.stringify(prisonInmate);
+
+            // display the object
+
+            document.getElementById("demo19").innerHTML = myString;
+
+
+
+    
+        
+        //  JAVASCRIPT OBJECT CONSTRUCTORS
+
+        // constructor function for people objects
+
+        function people(first, last, age, eye){
+
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.nationality = "English"; // will be default value of all objects
+        }
+
+        // create an object
+
+        const myFather = new people ("John", "Doe", 50, "blue");
+        const myMother = new people  ("Sally", "Rally", 48, "green");
+        const mySister = new people ("Anna", "Rally", 20, "green");
+        const mySelf = new people ("Johnny", "Rally", 22, "green");
+
+        document.getElementById("demo20").innerHTML = myFather.firstName + " " + myFather.lastName + " is" + myFather.age + " years old";
+        document.getElementById("demo21").innerHTML = myMother.firstName + " " + myMother.lastName + " is " + myMother.age + "  years old";
+        document.getElementById("demo22").innerHTML = mySister.firstName + " " + mySister.lastName + " is " + mySister.age + "  years old";
+        document.getElementById("demo23").innerHTML = mySelf.firstName + " " + mySelf.lastName + " is " + mySelf.age + "  years old";
+
+
+        // Adding a property to an object
+
+
+        myFather.nation = "France"; //this will be added to myFther object ONLY
+
+        document.getElementById("demo24").innerHTML = myFather.nation;
+
+
+
+        // ADDING A NEW PROPERTY TO THE CONSTRUCTOR
+
+        people.prototype.language = "German";  // will be added in the constructor and can be used with all objects 
+
+        document.getElementById("demo25").innerHTML = "My mother aslo speaks " + myMother.language;
+        document.getElementById("demo26").innerHTML = "My sister also speaks " + mySister.language;
+
+
+
+
+
+        // CONSTRUCTING A FUNCTION METHODS
+
+
+        
+        function house(first, last, age, eye){
+
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.nationality = "English";
+            this.fullName = function(){
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+            // create an object
+
+            const myFather1 = new house ("John", "Doe", 50, "blue");
+
+            // display data
+
+            document.getElementById("demo27").innerHTML = "My father's name is " + myFather1.fullName();
+
+
+
+            // ADD AN NAME METHOD
+
+            const myMother2 = new house  ("Sally", "Rally", 48, "green");
+
+            house.prototype.changeName = function(name){
+
+                this.lastName = name; // assigning the instance to argument
+
+            }
+
+            myMother2.changeName("Doe"); // change the last name from "rally" to "doe"
+
+            // display data
+            
+            document.getElementById("demo28").innerHTML = "My mother's last name is "+ myMother2.lastName;
+
+
+
+         
+        // PASS BY REFERENCE - UNDERSTANDING PASSING AN OBJECT AS REFERENCE TOA FUNCTION
+
+
+        function modifyObj(obj) {
+
+            obj.name = "Alice";
+            
+        }
+
+        let ppl = { name: "Bob" };
+            
+        document.getElementById("demo29").innerHTML = "The name is " + ppl.name;
+
+        modifyObj(ppl); // passing an object to a function
+
+        document.getElementById("demo30").innerHTML = "The name is changed to " + ppl.name;
+
+
+
+       // ARRAYS ARE ALSO PASSED AS REFERENCE
+
+            function modifyArray(arr) {
+
+                arr.push(4);
+
+            }
+
+            let numbers = [1, 2, 3];
+
+            document.getElementById("demo31").innerHTML = "The array of numbers are: " + numbers;
+
+
+            modifyArray(numbers); // pass array of numbers as reference
+
+            document.getElementById("demo32").innerHTML ="The arry numbers are changed and become " + numbers;
+
+
+
+                // EXAMPLE OF PASS BY RREFERENCE
+
+            function student2(theObject) {
+
+                    theObject.name = "Sara"; // Modifies the name property of the object
+
+            }
+
+                let student3 = { name: "Scott", standard: "V", roll_no: 1 };
+
+                let a, b;
+
+                a = student3.name; // 'a' gets "Scott"
+
+                student2(student3); // Function modifies student1.name to "Sara"
+
+                b = student3.name; // 'b' gets "Sara"
+
+                document.getElementById("demo33").innerHTML = a;
+                document.getElementById("demo34").innerHTML = b;
+
+
+
+
+
+            //REASSIGNING THE OBJECT REFERENCE (DOESNOT MODIFY THE ORIGINAL)
+
+
+            //  Example 1
+
+            function studen5(theObject1){
+                
+                theObject1 = {name: "Sara", standard: "VI", roll_no: 1}; // object reference reassigned
+        }
+
+                let student6= {name: "Scott", standard: "V", roll_no: 1};
+                
+                let $x, $y;
+
+                $x = student6.name;  // x gets the value "Scott"
+
+                student5(student6);
+
+                $y = student6.name;  // y still gets the value "Scott"
+
+                document.getElementById("demo35").innerHTML = $x;
+                document.getElementById("demo36").innerHTML = $y;
+
+
+            // Example 2
+
+            function changeRef(objt){
+
+                objt = {name: "Charlie"}; // reassigning object to a new object
+
+            }
+
+            let user2 = {name: "David"};
+
+            document.getElementById("demo37").innerHTML = user2.name; // ouputs David
+
+            changeRef(user2);
+
+            document.getElementById("demo38").innerHTML = user2.name;
+
+
+
+
+            // JAVASCRIPT EVENTS
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

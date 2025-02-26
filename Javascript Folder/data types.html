@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Data Types</title>
+    <!-- <script src="data-type.js"></script> -->
+
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+
+        // ADDING A NUBER AND A STRING TOGETHER
+
+        let n = 16 + "VOLVO";
+
+        document.getElementById("demo1").innerHTML = "The value of n is: " + n; // the number wlll be treated as a string
+
+        let x = 16 + 4 + " Ferari";
+
+        document.getElementById("demo2").innerHTML = "The value of x is: " + x;
+
+
+
+        // Javacsript  BigInt 
+
+        let m = BigInt (12345678901234567890123456789);
+
+        document.getElementById("demo3").innerHTML = "The bigInt stores a number in Floatng point Format: " + m;
+
+
+        // EXPONENTIAL NOTATION
+
+        let y = 123e5;
+        let z = 123e-5;
+
+        document.getElementById("demo4").innerHTML = "The Exponential Notation are: "+ "<br>" + y + "<br>" + z;
+
+
+
+        // typeof - used to define the type of data type used 
+
+        let r  = "JOHN DOE";
+        let t = 20.00;
+        let g = 34;
+
+        document.getElementById("demo5").innerHTML = typeof r;
+        document.getElementById("demo6").innerHTML = typeof t;
+        document.getElementById("demo7").innerHTML = typeof g; 
+
+
+    </script>
+</body>
+</html>

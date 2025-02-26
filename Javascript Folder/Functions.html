@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javacsript Functions</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+
+        function myFunction(p1, p2){
+
+            return (p1 * p2);  // used to stop javascript Function execution 
+        }
+
+        let result = myFunction(4, 3); // assigning reuslt to my function
+
+        document.getElementById("demo1").innerHTML = "The mutiplication of p1 and p2 is: " + result;
+
+
+        // The () Operator
+
+        function toCelcius(fahrenheit){
+
+            return(5/9) * (fahrenheit -32);
+
+        }
+        let fahrenheit = toCelcius(77);
+
+        document.getElementById("demo2").innerHTML = "The Celcius is: " + fahrenheit;
+
+        // Accessing the function without the () return the function itself and not the result
+
+        function Operator(f){
+
+            return (5 /9) * (f-32);
+        }
+        // let f = Operator(); // produces NaN
+
+        let f = Operator; // without assigning the value inside () it produces the return function itself
+
+        document.getElementById("demo3").innerHTML = f;
+
+
+
+        //  FUNCTION USED AS VARIABLES 
+
+
+        function celcius(fr){
+
+            return (5/9) * (fr -32);
+
+        }
+        
+        let text =  "The temparature is: "  + celcius(77) + " Celcius";
+
+        document.getElementById("demo4").innerHTML = text;
+
+
+        // LOCAL VARIABLES
+
+        let text1 = "Outside: " + typeof carName; // local variable not defined
+        document.getElementById("demo5").innerHTML = text1;
+
+        // local variable defined
+
+        function myFunction2(){
+            let carName =  "VOLVO";
+
+            // let text2 = myFunction2();
+            let text2 = "Inside: " + typeof carName + " " + carName;
+
+            document.getElementById("demo6").innerHTML = typeof text2;
+
+        }
+
+
+        
+
+        
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

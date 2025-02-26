@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p> 
+    <p id="demo13"></p> 
+    <p id="demo14"></p> 
+    <p id="demo15"></p> 
+    <p id="demo16"></p> 
+    <p id="demo17"></p> 
+    <p id="demo18"></p> 
+    <p id="demo19"></p> 
+    <p id="demo20"></p> 
+    <p id="demo21"></p> 
+    <p id="demo22"></p> 
+    <p id="demo23"></p> 
+    <p id="demo24"></p> 
+    <p id="demo25"></p> 
+    
+    <script>
+
+        // ARITHMETIC OPEARTORS
+
+        // Assign the value of x and y
+
+        let x = 5;
+        let y = 10;
+        let z = x + y;
+
+        
+        let a = 5;
+        let b = 10;
+        let c = a * b;
+
+        // display z(addition)
+        document.getElementById("demo").innerHTML = "The Sum of X and Y is: "+ z;
+
+        // Multiplication
+        document.getElementById("demo2").innerHTML = "The Multiplication of X and Y is: "+ c;
+
+          
+        let j = 12;
+        let k = (20 + 15) * j;
+
+        document.getElementById("demo3").innerHTML = k;
+
+
+        // ARITHMETIC OPERATORS
+        
+        let p = 10;
+        p +=10;  // p = p + 10
+
+        document.getElementById("demo4").innerHTML = p;
+
+        let f = 30;
+        f/=10;
+
+        document.getElementById("demo5").innerHTML = f;
+
+    
+        // Javascript Comparison Operators
+
+        let text1 = "20";
+        let text2 = "5";
+        let result = text1 > text2;
+
+        document.getElementById("demo6").innerHTML = "is 20 grater than 5? " + result;
+
+
+        // Javascript String Addition
+
+        let text3 = "John";
+        let text4 = "Doe";
+        let text5 = text3 + " " + text4;
+
+        document.getElementById("demo7").innerHTML = text5;
+
+        
+        // add string using the assignment operator
+
+        let text6 = "What a very";
+        text6 += "nice Day";
+
+        document.getElementById("demo8").innerHTML = text6;
+
+
+        // Adding Strings with Numbers
+        let l = 5 + 5;
+        let m = "5" + 5;
+        let n = "Hello"+ 5;
+
+        document.getElementById("demo9").innerHTML = l + "<br>" + m + "<br>" + n;
+
+
+        // JAVASCRIPT REMAINDER
+
+        let g = 5;
+        let h = 3;
+        let v = 5 % 3;
+
+        document.getElementById("demo13").innerHTML = v; // Remainder Operator
+
+
+        // JAVASCRIPT SYNTAX
+
+        document.getElementById("demo10").innerHTML = 5 * 10;
+
+        var r = 10;
+
+        document.getElementById("demo11").innerHTML = r * 15;
+
+
+        // JAVASCRIPT IS CASE SENSITIVE
+
+        let lastName, lastname;
+        lastName = "Doe";
+        lastname = "Peterson";
+
+        document.getElementById("demo11").innerHTML = lastName; //doe wiil be printed out
+        document.getElementById("demo12").innerHTML = lastname; // peterson will be printed out
+
+
+
+        
+        // INCREMENTAL OPERATOR
+
+        let e = 10;
+
+        e++; // increment the value of e by 1
+
+        let o = e;
+
+        document.getElementById("demo14").innerHTML = "The Increment of the value o is: " + o;
+
+
+
+        // THE DECREMENTT OPERATOR
+
+        let i = 20;
+        
+        i--; // decrement the value of i by 1
+
+        let u = i;
+
+        document.getElementById("demo15").innerHTML = "The Decrement of the value i is: " + i;
+
+
+        // EXPONENTIATION OPERATOR
+
+        let d = 5;
+        
+
+        let q = d ** 2; // the exponentiation operator
+
+        document.getElementById("demo16").innerHTML = "The Exponentiation of q is: " + q;
+
+
+        //   ADDITION ASSIGNMENT OPERATORS
+
+        let w = 10;
+        w += 5;
+
+        document.getElementById("demo17").innerHTML = "The assignment operator is: " + w;
+
+        let text7 = "HELLO";
+        text7 += " WORLD";
+
+        document.getElementById("demo18").innerHTML = text7;
+
+
+
+
+        //  LEFT SHIFT ASSGNMENT OPERATOR
+        let ls= -100;
+        ls <<= 5;
+
+        document.getElementById("demo19").innerHTML = "The value of ls is: " + ls;
+
+
+        // RIGHT  SHIFT ASSIGNMENT OPERATOR
+
+        let rs = -100;
+        rs >>= 5;
+
+        document.getElementById("demo20").innerHTML = "The value of s rs: " + rs;
+
+
+        // THE UNSIGNED RIGHT SHIFT ASSGINMENT VARIABLE
+        let urs =-100;
+        urs >>>= 5;
+
+        document.getElementById("demo21").innerHTML = "The Unsigned Right Shift Operator: " + urs;
+
+
+
+
+        // BITWISE AND ASSIGNMENT OPERATOR
+            let BAA = 100;
+            BAA &= 5;
+            document.getElementById("demo22").innerHTML = "Value of BAA is: " + BAA;
+
+
+
+        // BITWISE OR ASSIGNMENT OPERATOR  
+
+        let BOR= 100;
+        BOR |= 5;
+        document.getElementById("demo23").innerHTML = "Value of x is: " + BOR;
+
+
+
+        // BITWISE XOR ASSIGNMENT OPERATOR
+
+        let XOR = 10;
+        BOR ^= 5;
+
+        document.getElementById("demo24").innerHTML = "The value of XOR is: " + XOR;
+
+
+        // LOGIC AND ASSIGNMENT OPERATOR
+
+        let LA = 100;
+        LA &&= 5;
+
+        document.getElementById("demo25").innerHTML = "The value is: " + LA;
+
+
+        // LOGIC OR ASSIGNMENT OPERATOR
+
+        let LO;
+        LO ||= 5;
+
+        document.getElementById("demo26").innerHTML = "the value of LO is: " + LO;
+
+
+        // Nullish coalescing assignment operator
+
+        let NC;
+        NC ??= 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

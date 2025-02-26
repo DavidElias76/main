@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+
+    <script>
+        // Declairing Variables
+
+        // const keyword is used if the type is not to be changed 
+
+        const price1 = 20;
+        const price2 = 15;
+        const total = price1 + price2;
+
+        document.getElementById("demo").innerHTML = "The Sum is: " + total;
+
+        // let can also be used and combined together
+
+        let price3 = 20;
+        let price4 = 15;
+        let total_new = price3 * price4;
+
+        document.getElementById("demo2").innerHTML = "The Total is: " + total_new;
+
+        // JAVASCRIPT DOLLAR SIGN
+        let $ = "Hello World";
+        let $$$ = 20;
+        let $myMoney = 20;
+
+        document.getElementById("demo3").innerHTML = $$$ + $myMoney;
+
+
+
+        // REDECLAIRNG VARIABLE BOTH BLOCK SCOPE AND GLOBAL SCOPE
+
+        var x = 10; //global scope
+        {
+            var x = 2; // block scope
+        }
+        document.getElementById("demo4").innerHTML = x; // THE BLOCK SCOPE WIIL BE SELECTED
+
+
+        let y = 10;
+        {
+            let y = 20;
+        }
+
+        document.getElementById("demo5").innerHTML = y; // THE GLOBAL SCOPE WILL BE DECLARED
+
+
+        // LET HOISTING - var can be used without declairing a variable keyword
+
+        carName = "VOLVO"
+        var carName;
+
+        document.getElementById("demo6").innerHTML = carName;
+
+
+        // CONSTANT ARRAYS
+
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        cars[0] = "Toyota" // changing the first index to toyota
+
+        cars.push("Ferrari"); // add a new array element called toyota
+
+
+        document.getElementById("demo7").innerHTML = cars[0]; // prints out saab
+        document.getElementById("demo8").innerHTML = cars[1];
+        document.getElementById("demo9").innerHTML = cars[2];
+        document.getElementById("demo10").innerHTML = cars[3];
+
+        // JAVASCRIPT OBJECTS
+
+        // Create an object:
+        const car = {type:"Fiat", model:"500", color:"white"};
+
+        // Change a property:
+        car.color = "red"; 
+
+        // Add a property:
+        car.owner = "Johnson"; 
+        
+        document.getElementById("demo11").innerHTML = "Car owner is " + car.owner; 
+
+
+        // BLOCK SCOPE
+        const b = 10
+        // here x = 10
+
+        {
+            const b = 3;
+            // here x is 3
+    
+        }
+
+        document.getElementById("demo12").innerHTML = "X is: " + b; // outside the function x is 10
+
+
+    </script>
+</body>
+</html>
