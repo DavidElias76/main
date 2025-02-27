@@ -266,9 +266,64 @@
 
         let text17 = "John Doe";
 
-        document.getElementById("demo36").innerHTML = text17.endsWith("Doe"); // return true
+        document.getElementById("demo36").innerHTML = "The text ends with doe and is: " + text17.endsWith("Doe"); // return true
 
-        document.getElementById("demo37").innerHTML = text16.endsWith("world", 11); // cheack if the first 11 characters end with the word "world"
+        // document.getElementById("demo37").innerHTML = text16.endsWith("world", 11); // cheack if the first 11 characters end with the word "world"
+
+
+
+
+
+        // JAVASCRIPT STRINGS TEMPLATES
+
+        // variable substitution
+
+        let firstName2 = "John";
+        let lastName = "Doe";
+
+        let text18 = ` Welcome ${firstName2}, ${lastName} `;
+
+        document.getElementById("demo37").innerHTML = text18;
+
+
+
+        // Expression Substitution
+
+        let price = 10;
+        let VAT = 0.25;
+
+        let total2 = ` Total : ${(price * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("demo38").innerHTML = total2;
+
+
+
+        // HTML TEMPLATES
+
+        let header = "Template Strings";
+        let tags = ["template strings", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+        html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById("demo39").innerHTML = html;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
