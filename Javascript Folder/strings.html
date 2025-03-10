@@ -276,7 +276,7 @@
 
         // JAVASCRIPT STRINGS TEMPLATES
 
-        // variable substitution
+        // variable substitution - INTERPOLATION
 
         let firstName2 = "John";
         let lastName = "Doe";
@@ -311,6 +311,18 @@
 
         html += `</ul>`;
         document.getElementById("demo39").innerHTML = html;
+
+
+        // MULTILINE STRINGS - only available in template strings
+
+        let line= `the quick brown
+                    fox jumps over the
+                    lazy dog`;
+
+        document.getElementById("demo40").innerHTML = line;  // create one line
+
+
+
 
 
 

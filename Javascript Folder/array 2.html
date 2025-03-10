@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript arrays</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <script>
+         // JAVASCRIPT ARRAY ITERATION
+
+            // FOREACH() METHOD
+
+            const numbers = [45, 4, 9, 16, 25];
+
+           let txt = "";
+
+           numbers.forEach(myFunction);
+
+           document.getElementById("demo1").innerHTML = "The numbers in the array are:" + "<br>" + txt;
+
+           function myFunction(value, index, array){
+
+            txt += value + "<br>";
+ 
+           }
+
+           // MAP() METHOD
+
+           const numbers2 = numbers.map(myFunction2);
+
+           function myFunction2(value){
+
+             return value * 2;
+
+           }
+
+           document.getElementById("demo2").innerHTML =  "The numbers using map method: " + numbers2;
+
+
+           // FLATMAP() METHOD
+
+        //    const numbers3 = numbers.flatMap(myFunction3);
+
+                // you can also use the arrow function
+                const numbers3 =  numbers.flatMap((x) => x * 10);  
+
+           function myFunction3(value){
+                return value * 10;
+
+           }
+
+           document.getElementById("demo3").innerHTML =  "The numbers using flatmap method: " + numbers3;
+
+
+
+            // FILTER() METHOD
+
+           const numbers4 =  numbers.filter((x) => x > 18);   // USING ARROW FUNCTION
+
+        //    function myFunction4(value){
+        //         return value > 18;
+
+        //    }
+
+           document.getElementById("demo4").innerHTML =  "The numbers greater than 18 using filter method are: " + numbers4;
+
+
+
+            // REDUCE() METHOD - reduce an arrau into a single value
+
+            let sum = numbers.reduce((total, value) => total+value);
+
+
+            document.getElementById("demo5").innerHTML =  "Using the reduce method the sum is: " + sum;
+
+
+
+            // EVERY() METHOD - checks if all array values pass a test
+
+            let number5 = numbers.every((value) => value > 18); // if greater than 18 true if not false
+
+            document.getElementById("demo6").innerHTML =  "Using every method: " + number5;
+
+
+
+            // SOME() METHOD - checks if some of the array value pass a test
+
+            let number6 = numbers.some((value) => value > 18); // if some values are greater than 18 true if not false
+
+            document.getElementById("demo6").innerHTML =  "Using some method: " + number6;
+
+
+
+            // KEYS() - print ou the indexes of the array
+
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+            const keys = fruits.keys();
+
+            let txt2 = "";
+
+            for(let x of keys){
+
+                txt2 += x + "<br>";
+            }
+
+            document.getElementById("demo7").innerHTML =  "Using keys method: " + "<br>" + txt2;
+
+
+
+            // ENTRIES() - The entries() method returns an Array Iterator object with key/value pairs:
+
+            const entries = fruits.entries();
+
+            let txt3 = "";
+
+            for(let x of entries){
+
+                txt3 += x + "<br>";
+            }
+
+            document.getElementById("demo8").innerHTML =  "Using entries method: " + "<br>" + txt3;
+
+
+
+
+            // WITH() METHOD - update elements of an array without changing the original array
+
+            const months = ["Januar", "Februar", "Mar", "April"];
+            const myMonths = months.with(2, "March");
+
+            document.getElementById("demo9").innerHTML =  "Using with method to update array: " + "<br>" + myMonths;
+            
+
+
+
+            // SPREAD - The ... operator expands an iterable (like an array) into more elements:
+
+            const q1 = ["Jan", "Feb", "Mar"];
+            const q2 = ["Apr", "May", "Jun"];
+            const q3 = ["Jul", "Aug", "Sep"];
+            const q4 = ["Oct", "Nov", "May"];
+
+            const year = [...q1, ...q2, ...q3, ...q4];
+
+            document.getElementById("demo10").innerHTML =  "Using spread method: " + "<br>" + year;
+
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+            
+
+
+
+            
+
+            
+
+
+           
+
+
+
+            
+
+
+
+
+    </script>
+</body>
+</html>
