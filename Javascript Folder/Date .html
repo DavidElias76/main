@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dates</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+
+    
+    <script>
+        let now = new Date();
+
+        // alert(now);
+
+        document.getElementById("demo1").innerHTML = "The date is" + now;
+
+
+        // DATE MILLISECONDS
+        
+        let Jan01_1970 = new Date(0);
+
+        document.getElementById("demo2").innerHTML = "The date in milliseconds: " + Jan01_1970;
+
+        // now add 24 hours, get 02.01.1970 UTC+0
+        let Jan02_1970 = new Date(24 * 3600 * 1000);
+
+        document.getElementById("demo3").innerHTML = "The date in milliseconds: " + Jan02_1970;
+
+        // alert( Jan02_1970 );
+
+
+
+        // DATE STRINGS
+
+        let date = new Date("2017-01-26");
+
+        document.getElementById("demo4").innerHTML = "The date strings : " + date;
+
+
+
+        // new Date(year, month, date, hours, minutes, seconds, ms) - it follows the following format
+
+        let date2 = new Date(2011, 0, 1, 2, 3, 4, 567);
+
+        document.getElementById("demo4").innerHTML = "The date format: " + date2;
+
+
+        // DATE METHODS
+
+        // DISPLAY DATES
+
+            // TODATESTRING() - converts date to more readable format
+
+            const now2 = new Date();
+
+            document.getElementById("demo5").innerHTML = "The date format: " + now2.toDateString();
+
+
+            // TOUTCSTRING()
+
+            document.getElementById("demo6").innerHTML = "The date format: " + now2.toUTCString();
+
+
+            // The toISOString()
+
+            document.getElementById("demo7").innerHTML = "The date format: " + now2.toISOString();
+
+
+
+
+        // ACCESSSING DATE COMPONETS - GET() METHODS
+
+        const d = new Date();
+
+        // document.getElementById("demo8").innerHTML = "The date format to get the day: " + d;           
+        
+        document.getElementById("demo8").innerHTML = "The date format to get the day: " + d.getDate();
+
+       // document.getElementById("demo9").innerHTML = "The date hours: " + d.gethours();            
+    // document.getElementById("demo10").innerHTML = "The date minutes: " + d.getMinutes();            
+        // document.getElementById("demo11").innerHTML = "The date seconds: " + d.getSeconds();            
+        // document.getElementById("demo12").innerHTML = "The date milliseconds: " + d.getMilliseconds();            
+        // document.getElementById("demo13").innerHTML = "The date format: " + d.getFullYear();
+        // document.getElementById("demo14").innerHTML = "The time is : " + d.getTime();
+
+
+        
+        // UTC GET METHODS - is the same as the get methods
+
+        document.getElementById("demo9").innerHTML ="The date today in utc time is: " + d.getUTCDate();
+        // document.getElementById("demo9").innerHTML = d.getUTCDay();
+        // document.getElementById("demo9").innerHTML = d.getUTCFullYear();
+        // document.getElementById("demo9").innerHTML = d.getUTCHours();
+        // document.getElementById("demo9").innerHTML = d.getMinutes();
+        // document.getElementById("demo9").innerHTML = d.getUTCMilliseconds();
+        // document.getElementById("demo9").innerHTML = d.getUTCSeconds();
+        // document.getElementById("demo9").innerHTML = d.get;
+
+
+
+        // SET() METHODS
+
+        const r = new Date("January 01, 2025");
+
+        document.getElementById("demo10").innerHTML = r; 
+
+        r.setFullYear(2023);        
+        // r.setHours(20);        
+        // r.setDate(25);        
+        // r.setMinutes(20);        
+        // r.setSeconds(200);        
+        // r.setTime();        
+        // r.setMilliseconds(300);
+        // r.setMonth(8);    
+
+        
+        document.getElementById("demo11").innerHTML = "The year is now: " + r;
+        // document.getElementById("demo11").innerHTML = "The month is now: " + r;
+        // document.getElementById("demo11").innerHTML = "The hours is now: " + r;
+        // document.getElementById("demo11").innerHTML = "The date is now: " + r;
+        // document.getElementById("demo11").innerHTML = "The miniutes is now: " + r;
+        // document.getElementById("demo11").innerHTML = "The seconds is now: " + r;
+        // document.getElementById("demo11").innerHTML = "The time now: " + r;
+        // document.getElementById("demo11").innerHTML = "The milliseconds is now: " + r;
+
+
+
+        // AUTOCORRECTION IN JAVASCRIPT INFO
+
+        const date3 = new Date(2013, 1, 28);
+
+        date3.setDate(date3.getDate() + 2);
+
+        document.getElementById("demo12").innerHTML = date3;
+
+
+        const date4 = new Date(2025, 3, 20);
+
+        date3.setDate(date4.getMilliseconds() + 300);
+
+        document.getElementById("demo12").innerHTML = "The milliseconds and 70: " + date4;
+
+
+
+        // Date to number, Date difference
+
+        let start = new Date(); // start measuring time
+
+        //  do the job
+
+        for (let i = 0; i < 10000; i++){
+
+            let dosomething = i * i * i;
+            
+        }
+
+        let end = new Date(); // end measuring time
+
+        document.getElementById("demo13").innerHTML = `The loop took  ${end - start} ms`;
+
+
+        
+        // EXAMPLE 2
+        let start2 = new Date(); // start measuring time and get the milliseconds
+        document.getElementById("demo14").innerHTML = "Start Time: " + start2.toLocaleString(); // start time
+
+
+        // do the job - to know the time it took to run and stop the function
+
+        for (let i = 0; i < 100000; i++) {
+        
+            let doSomething = i * i * i;
+        }
+
+        let end2 = new Date(); // end measuring time and get the milliseconds 
+
+        document.getElementById("demo15").innerHTML = "End Time: " + end2.toLocaleString(); // end time
+        
+        
+        document.getElementById("demo16").innerHTML = `The loop took  ${end2 - start2} ms`;
+
+
+
+        // DATE.NOW()-  retursn the milliseconds since the jan 1st 1970 and present
+
+        let start3 = Date.now();
+
+        document.getElementById("demo17").innerHTML = "Start Time: " + start3; // start time
+
+        for(let i = 0; i < 100000; i++){
+            
+            let dosomething2 = i * i * i;
+
+        }
+
+        let end3 = Date.now();
+
+        document.getElementById("demo18").innerHTML = "End Time: " + end3; // end time
+
+        document.getElementById("demo19").innerHTML = `The loop took  ${end3 - start3} ms`;
+
+
+/**
+ ** TODO: TO BE REVISITED
+**/
+        // BENCHMARKING - testing execution speed of two functions - 
+        
+        
+
+        function diffSubtract(date1, date2) {
+        
+            return date2 - date1; // jaascript converts the date into numbers before execution 
+        }
+
+        function diffGetTime(date1, date2) {
+        
+            return date2.getTime() - date1.getTime(); // get the dates in milliseconds
+        }
+
+        function bench(f) {
+
+            let date1 = new Date(0); // Jan 1, 1970 (epoch time) or utc time
+
+            let date2 = new Date(); // current time and date
+
+            let start = Date.now(); // date to be returned in miliseconds
+        
+        for (let i = 0; i < 100000; i++) f(date1, date2); // runs the function 100000 times
+        
+            return Date.now() - start; // Return total time taken
+        }
+
+        // alert( 'Time of diffSubtract: ' + bench(diffSubtract) + 'ms' );
+        // alert( 'Time of diffGetTime: ' + bench(diffGetTime) + 'ms' );
+
+        document.getElementById("demo20").innerHTML =  'Time of diffSubtract: ' + bench(diffSubtract) + 'ms';
+
+        document.getElementById("demo21").innerHTML =  'Time of diffGetTime: ' + bench(diffGetTime) + 'ms';
+
+
+        
+
+
+
+
+        
+
+
+
+
+        
+
+
+        
+
+        
+
+
+
+
+
+
+        
+
+
+
+
+            
+
+
+            
+
+
+
+
+
+
+
+        
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+
+    <script>
+        // // date objects
+
+        // const date = new Date(2012, 1, 20, 3, 12, 0);
+
+        // document.getElementById("demo1").innerHTML = date;
+
+
+
+        // Write a function getWeekDay(date) to show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’.
+
+        function getWeekDay(date2) {
+
+            let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+
+            return days[date2.getDay()];
+        }
+
+        let date2 = new Date(2014, 0, 3); // 3 Jan 2014
+
+        document.getElementById("demo2").innerHTML= getWeekDay(date2) ; // FR
+
+
+       // european week 
+
+    // Write a function getLocalDay(date) that returns the “European” day of week for date.
+
+
+    // function getLocalDay(date3){
+
+    //     let day = date3.getDay();
+
+    //     if(day == 0){
+    //         day = 7;
+    //     }
+
+    //     return day;
+    // }
+
+    // document.getElementById("demo3").innerHTML = day;
+
+
+
+
+    // WHICH DAY OF THE MONTH WAS MANY DAYS AGO
+
+    // function dateAgo(date, days){
+
+    //     let dateCopy = new Date(date);
+
+    //     dateCopy.setDate(date.getDate() - days);
+
+    //     dateCopy.setDate();
+
+    // }
+
+    // let date3 = new date(2015, 0, 3);
+
+    // document.getElementById("demo4").innerHTML = dateAgo(date, 3);
+
+
+
+    function getDateAgo(date, days) { // parameters date and days
+ 
+        let dateCopy = new Date(date); // new Date(date) creates a copy of date so the original date is not modified.
+
+        dateCopy.setDate(date.getDate() - days); // get the date and subtract from the number of days and the set it as the new date 
+
+        return dateCopy.getDate(); // get the date that has been subtracted
+    }
+
+        let date = new Date(2015, 0, 2); // set the original date 
+
+        // arguments to be used to calculate the date
+        document.getElementById("demo3").innerHTML = "The function that get the days: " + getDateAgo(date, 1); // 1, (1 Jan 2015)
+        document.getElementById("demo4").innerHTML = getDateAgo(date, 31)// 31, (31 Dec 2014)
+        document.getElementById("demo5").innerHTML = getDateAgo(date, 356) // 2, (2 Jan 2014)
+
+
+        
+
+        // Write a function getLastDayOfMonth(year, month) that returns the last day of month.
+
+        function lastDayMonth(year, month){
+
+            let date = new Date(year, month + 1, 0);
+
+            return date.getDate();
+
+        }
+
+        document.getElementById("demo6").innerHTML ="The last day of the month is: " + lastDayMonth(2012, 1) // 2, (2 Jan 2014)
+
+
+
+        // Write a function getSecondsToday() that returns the number of seconds from the beginning of today.
+
+        function secondsToday(){
+
+            let now = new Date(); // the now date 
+
+            let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // this get the day month and year at the beginning of today
+
+            let diff = now - today; // mlliseconds difference
+
+            return Math.round(diff / 1000); // take the return and convert into seconds
+
+        }
+
+        document.getElementById("demo7").innerHTML = "The seconds since beginning of today is: " + secondsToday(); // call back the function
+
+
+// another way to do it
+
+        function getSecondsToday(){
+
+            let d = new Date()
+
+            return d.getFullYear() *  3600 + d.getMonth() * 60 + d.getDate();
+
+        }
+
+        document.getElementById("demo8").innerHTML = "The seconds since beginning of today is: "+ getSecondsToday(); // call back the function
+
+        
+
+        // Create a function getSecondsToTomorrow() that returns the number of seconds till tomorrow.
+
+        function secondsTomorrow(){
+
+            let now2 = new Date();
+
+            let tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+
+            let diff2 = tomorrow - now2;
+
+            return Math.round(diff2 / 1000);
+        }
+
+        document.getElementById("demo9").innerHTML = "The seconds tomorrow since beginning of today is: "+ secondsTomorrow(); // call back the function
+
+
+        // Alternative solution:   
+        
+        function secondstotomorrow(){
+            let now3 = new Date();
+            let hours = now3.getHours();
+            let minutes = now3.getMinutes()
+            let seconds = now3.getSeconds();
+
+            let totalSecondsToday = (hours * 60 + minutes) * 60 + seconds;
+            let totalSecondsAllDay = 84600;
+
+            return totalSecondsAllDay - totalSecondsToday;
+        }
+
+        document.getElementById("demo10").innerHTML = "The difference btween seconds all day and seconds today is: "+ secondstotomorrow(); // call back the function
+
+        
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
