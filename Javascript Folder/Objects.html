@@ -132,7 +132,7 @@
         document.getElementById("demo5").innerHTML = person.firstName + " is " + person.age + " years old ";
 
 
-
+        
         // JAVASCRIPT OBJECT PROPERTIES
 
         const student = {
@@ -500,8 +500,40 @@
 
 
 
-            // JAVASCRIPT EVENTS
+           // checks if an object property exists  
 
+            let user4 = {name: "John", age: 30};  
+
+            // document.write("age" in user4 + "<br>"); // true if it exits
+
+            // document.write("blabla" in user4 + "<br>"); // false  if it doesnot exits\
+
+            // alert("age" in user4); // true if it exits
+
+            // alert("blabla" in user4); // false  if it doesnot exits
+
+            document.getElementById("demo39").innerHTML = "age" in user4; // true   
+            document.getElementById("demo40").innerHTML = "blabla" in user4; // false  
+            
+            
+
+        
+            // ACCESS PROPERTIES FORM OBJECT AND ARRAYS IN OBJECTS
+
+            const patient ={
+                name: "Alice",
+                age: 30,
+                addresses: [
+                    {type: "home", stret: "123 Main St", city: "New York"},
+                    {type: "work", street: "456 Market St", city: "Los Angeles"}
+                ],
+            };
+
+            // Accessing properties from the object
+            
+         
+
+            
 
 
 
