@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Animation API</title>
+    <style>
+        body{
+            overflow-x: hidden;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        } 
+        .square{
+            text-align: center;
+            width: 10rem;
+            aspect-ratio: 1/1;
+            background-color: #1b1b32;
+        }
+        button{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .square2{
+            text-align: center;
+            width: 10rem;
+            aspect-ratio: 1/1;
+            background-color: #1b1b32;
+            margin: 5rem 5rem 1rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="square" class="square"></div>
+    <br>
+    <div id="square2" class="square2"></div>
+    <br>
+    <button id="playBtn">Play</button>
+    <button id="pauseBtn">Pause</button>
+
+    <script src="animationAPI.js"></script>
+</body>
+</html>

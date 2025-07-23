@@ -1,0 +1,63 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* colors */
+:root {
+  --dark-grey: #0a0a23;
+  --white: #ffffff;
+  --yellow: #f1be32;
+}
+
+body {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+/* head section */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+/* dropdown menu section */
+.select-container {
+  display: block;
+  margin: 25px auto;
+  padding: 8px;
+  border: 4px solid var(--white);
+  border-radius: 4px;
+  width: 200px;
+}
+/* products section */
+.products-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+/* media queries min-width 768px and above for desktop screen*/ 
+@media (min-width: 760px) {
+  .products-container {
+    flex-direction: row;
+  }
+}
+/* card */
+.card {
+  background-color: var(--white);
+  color: var(--dark-grey);
+  border: 4px solid var(--yellow);
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+.paragraph{
+  /* text-align: center; */
+  font-size: 1.5rem;
+  
+}

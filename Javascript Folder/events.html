@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners</title>
+    <style>
+        body{
+            /* background-color: grey; */
+            overflow-x: hidden;
+            /* max-height: 800px; */
+        }
+
+        .highlight{
+            background-color:  yellow;
+        }
+
+    
+        /* styling the toggle menu */
+        .menu{
+            display: none;
+            background-color: lightslategray;
+            width: 50%;
+            padding: 10px;
+            color: white;
+        }
+        .menu.show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- events -->
+    
+    <button id="btn">show alert</button>
+    
+    <!-- input event -->
+
+    <input type="text" name="" id="input" placeholder="type something">
+
+    <!-- remove event listener -->
+
+    <h1>Event listener exmaple</h1>
+    <p id="para2">MouseOver this text to remove the event listener</p>
+    <button id="btn2">change button color</button><br>
+    <br>
+    <br>
+
+    <!-- element style and element class list -->
+    <button id="btn-color">Add Highlight</button>
+    <p id="paragragh">This is a paragraph using the classlist and style</p>
+    <br>
+    <br>
+
+    <button id="toggle-btn">Toggle Menu</button>
+    <nav id="menu" class="menu">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Products</li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+
+    <!-- DOMCONTENTLOADED -->
+
+    <img src="../landing page/images folder/dylan-calluy-ADbK0eIu3Xc-unsplash.jpg" alt="cofee image" id="example-img" width="300px" height="300px">
+    <br>
+
+<script src="events.js"></script>
+</body>
+</html>

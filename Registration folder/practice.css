@@ -4,7 +4,7 @@ body{
     background-attachment: fixed;
     
 }
-.loginform{
+.loginform, .Registration{
     border: 2px solid black;
     opacity: 0.9;
     padding-left: 15px;
@@ -16,25 +16,41 @@ body{
 
     
 }
-[type=text] {
+[type=text], [type=password]
+ {
     border: 1px solid black;
     padding: 10px 10px;
     border-radius: 5px;
     width: 60%;
     color: black;
     outline: none;
+    margin: 1rem 0 1rem 0;
 }
 [type=text] :focus{
     border: 1px solid rgb(90, 20, 20);
 }
-[type=button] {
+[type=button], [type=submit], [type=reset] {
     border: 1px solid black;
     padding: 14px 16px;
     border-radius: 5px;
     background-color: rgb(123, 150, 123);
     color: rgb(22, 21, 21);
-
+    margin: 0rem 0rem 1rem 1rem;
+    cursor: pointer;
+    
 }
 [type=button]:hover{
     background-color: rgb(101, 189, 101);
 }
+.Registration{
+    font-size: 1rem;
+    color: rgb(22, 21, 21);
+    font-weight: bold;
+    margin-top: 30px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border: 2px solid black;
+}
+
+

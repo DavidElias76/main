@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <!-- for validation -->
+    <form action="">
+        <label for="email">Enter email: </label>
+        <input 
+        required
+        type="email"
+        name="" 
+        id="email"
+        placeholder="username@sampleCompany.com"
+        pattern=".+@sampleCompany\.com"
+        >
+        <br>
+        <br>
+        <textarea name="" id="" required placeholder="Your feedback here.."></textarea>
+        <br>
+        <button id="check-input">Submit Feedback</button>
+        <br><br>
+
+        <!-- preventDefault() -->
+         <label for="text-input">Enter some characters:
+            <input type="text" name="" id="text-input">
+         </label>
+         <p id="output"></p>
+    </form>
+    <script src="formValidation.js"></script>
+</body>
+</html>

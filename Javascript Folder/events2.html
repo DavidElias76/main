@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Animation API</title>
+    <style>
+       /* using the requestAnimationFrame */
+
+        .rect{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 250px;
+            border-radius: 5px;
+            background-color: #1b1b32;
+            color: white;
+            font-size: 2rem;
+            position: absolute;
+        }
+
+        /* web animation API */
+
+        body{
+            /* height: 300vh; */
+            overflow-x: hidden;
+            /
+        }
+            
+    </style>
+</head>
+<body>
+    <div id="rect" class="rect">freeCodeCamp is awesome</div>
+    <br>
+    <br>
+    <br>
+
+    <!-- event bubbling -->
+     <p style="margin-top: 20rem;"><span>click Me</span></p> <!-- position the span element at the bottom to see of it works-->
+    <script src="events2.js"></script>
+</body>
+</html>

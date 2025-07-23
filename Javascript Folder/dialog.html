@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+</head>
+<body>
+    <br>
+    <br>
+    <dialog id="my-modal">
+        <p>This is a modal dialog</p>
+        <button id="close-btn">Close Dialog</button>
+    </dialog>
+    <button id="open-modal">Open Modal Dialog</button>
+    <br>
+    <br>
+    <!-- dialog to display sign up form-->
+     <button id="signUp">Sign up</button>
+    <dialog id="signUp-modal">
+        <h2>Sign up Form</h2>
+        <form action="" method="post">
+            <label for="fname">FirstName: </label>
+            <input type="text" id="fname" placeholder="FirstName">
+            <br>
+            <label for="lname">LastName:</label>
+            <input type="text" id="lname" placeholder="LastName">
+            <br>
+            <label for="pnumber">Phone Number:</label>
+            <input type="text" id="pnumber">
+            <br>
+            <label for="Password">Password:</label>
+            <input type="text" id="Password">
+            <br>
+            <button id="Sign">Sign up</button>
+            <button id="cancel">Cancel</button>
+        </form>
+    </dialog>
+    <script src="dialog.js"></script>
+</body>
+</html>
