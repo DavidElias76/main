@@ -87,7 +87,7 @@ const products = [
   },
 ];
 
-// creat the elememts  
+// creat the elememts and use the object destructing to creta the varibles 
 products.forEach(({name, id, price, category}) => {
     dessertCards.innerHTML += `
     <div class= "dessert-card">
@@ -102,34 +102,111 @@ products.forEach(({name, id, price, category}) => {
 });
 
 
+// creete a class
+class ShoppingCart {
+  constructor(parameters) {
+    this.items = [];
+    this.total = 0;
+    this.taxRate = 8.25
+  }
+  
+  addItem(id, products){
+    
+    const product = products.find(item => item.id === id); 
+    const {name, price} = product; 
+    this.items.push(product)
 
+    // count the number of products in the array
+    const totalCountPerProduct =  {}
+    this.items.forEach(dessert => {
+      // checks if the product exist indise the totalCountPerProduct and id it doesnot exit add the value of 0 and increment the value by one and return the value
+      totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;//  assign  the value  
+      
+    });
 
+    const currentProductCount = totalCountPerProduct[product.id]; //  gets the current quantity of a specific product from a totalCountPerProduct object, using the product's ID as the key.
+    const currentProductCountSpan = document.getElementById(`product-count-for-id${id}`); // get the span element
 
+    currentProductCount > 1 
+      ? currentProductCountSpan.textContent = `${currentProductCount}x`  // if greater than 1 count the number of items added
+      : productsContainer.innerHTML += `
+      <div id="dessert${id}" class="product">
+        <p>
+          <span class="product-count" id="product-count-for-id${id}"></span>${name}
+        </p>
+        <p>${price}</p>
+      </div>
+      `;
+  }
 
+  //  return the length of the array
+  getCounts(){
+    return this.items.length;
+  }
 
+  // calcuulate taxes
+  calculateTaxex(amount){
+    return parseFloat(((this.taxRate / 100) * amount).toFixed(2))
+  }
+  // calculate the total
+  calculateTotal(){
+    const subTotal =  this.items.reduce((total, item) => total + item.price, 0);
+    const tax = this.calculateTaxex(subTotal);// callback the function to calculate the tax
+    this.total = subTotal + tax; // the sum of the tax plus the subTotal
+    cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
+    cartTaxes.textContent = `$${tax.toFixed(2)}`;
+    cartTotal.textContent = `$${this.total.toFixed(2)}`;
+    return this.total;
+  }
 
+  // clears the cart and check if false show an alert message
+  clearCart(){
+    if(!this.items.length){
+      alert("Your shopping cart is already empty");
+      return;
+    }
 
+  // confirmation message when clearing the cart using the confirm prompt
+  const isCartCleared = confrim("Are you sure you want to clear all items from your shopping cart?");
 
+  if(isCartCleared){
+    this.items = [];
+    this.total= 0;
+    productsContainer.innerHTML = "";
+    totalNumberOfItems.textContent = 0;
+    cartSubTotal.textContent = 0;
+    cartTaxes.textContent = 0;
+    cartTotal.textContent = 0;
 
+  }
+  }
+}
 
+// create the instances
+const cart = new ShoppingCart(); 
 
+// get element add to cart btn
+const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
+// convert the add To button into an array using the spread syntax
+[...addToCartBtns].forEach((btn) =>  {
+  btn.addEventListener("click",(event) =>  {
+    cart.addItem(Number(event.target.id),  products) //  pass product array and an id as arguments
+    totalNumberOfItems.textContent = cart.getCounts();// callback the getcounts method retuned value
+    cart.calculateTotal(); // callback the calculatetotal function which in turn calls the calculatetax function
+  })
+})
+// add event listner to show or hide the cart
+cartBtn.addEventListener("click", ()=>{
+  isCartShowing = !isCartShowing; // reassign iscartShowing to false
+  showHideCartSpan.textContent = isCartShowing ? "Hide" :  "Show";
+  cartContainer.style.display = isCartShowing ? "block" :  "none"
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// add  event listener to clear the cart and  callback the clearcart function
+clearCartBtn.addEventListener("click", ()=> {
+  cart.clearCart.bind(cart)
+})
 
 
 
