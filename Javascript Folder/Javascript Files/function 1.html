@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    // function to add two numbers and calling back he function
+
+    function add(x, y){
+        let s=parseInt(x)+parseInt(y);
+        return s;
+    }
+    function get(){
+        // declare the varible of x and y
+        var x= 5;
+        var y= 7;
+        let s= add(x,y); // call tthe function add to get the result
+        
+        alert(`The sum of ${x} and ${y} is: ${s}`); // Correctly uses template literals with backticks
+        alert(`the sum of ${x} and ${y} is: ${s}`); // Correctly uses template literals with backticks
+        document.write(s);// without using alert message
+    }
+    get(); // call the function
+</script>
+        
+</head>
+<body>
+    
+</body>
+</html>

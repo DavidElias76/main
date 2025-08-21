@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // from chagpt 
+        // Function to calculate the sum of array elements
+        function add(nums) {
+            let sum = 0;
+            for (let i = 0; i < nums.length; i++) {
+                sum += nums[i];
+            }
+            return sum;
+        }
+    
+        // Main program
+        let nums = new Array(10); // Create an array with size 10
+    
+        // Collect ten integers from the user
+        for (let i = 0; i < nums.length; i++) {
+            nums[i] = parseInt(prompt(`Enter integer ${i + 1}:`), 10);
+        }
+    
+        // Pass the array to the add function and display the result
+        let total = add(nums);
+        confirm(`The sum of the entered numbers is: ${total}`); // correct literals using backticks
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
