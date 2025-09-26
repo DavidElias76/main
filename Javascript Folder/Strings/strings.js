@@ -115,7 +115,7 @@
         document.write("demo34: " + text16.startsWith("hello") + "<br>");
         document.write("demo35: " + text16.startsWith("world", 5) + "<br>");
 
-        // JAVASCRIPT ENDSWITH() METHOD
+        // JAVASCRIPT WITH() ENDSMETHOD
         let text17 = "John Doe";
         document.write("demo36: The text ends with Doe and is: " + text17.endsWith("Doe") + "<br>");
 

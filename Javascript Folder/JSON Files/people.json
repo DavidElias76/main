@@ -1,0 +1,27 @@
+
+[
+    {
+        "name"  : "SpongeBob",
+        "age" : 30,
+        "isEmployed": true,
+        "hobbies" : ["JellyFishing", "Karate", "Cooking"]
+    },
+     {
+        "name"  : "Patrick",
+        "age" : 45,
+        "isEmployed": false,
+        "hobbies" : ["JellyFishing", "Karate", "Cooking"]
+    },
+     {
+        "name"  : "Sally",
+        "age" : 20,
+        "isEmployed": false,
+        "hobbies" : ["JellyFishing", "Karate", "Cooking"]
+    },
+     {
+        "name"  : "SquidWard",
+        "age" : 50,
+        "isEmployed": true,
+        "hobbies" : ["JellyFishing", "Karate", "Cooking"]
+    }
+]

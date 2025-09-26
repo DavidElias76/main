@@ -76,20 +76,20 @@ document.addEventListener("DOMContentLoaded", function (){
 
 // update an image in the browser
 
-function changeImage(){
-    const img = document.getElementById("example-img");
-    img.src = "../landing page/images folder/coffee image 6.jpg";
-    img.style.width= "300px"
-    img.style.height = "300px"
-    console.log("image was just changed");
-}
-// checks if the document is stil loading and added an event listener that changes the image 
-if(document.readyState = "loading"){
-    document.addEventListener("DOMContentLoaded", changeImage);
-}else{
-    console.log("DOM has already fired up");
-    changeImage();  // callback the function if the document has already loaded
-}
+// function changeImage(){
+//     const img = document.getElementById("example-img");
+//     img.src = "../landing page/images folder/coffee image 6.jpg";
+//     img.style.width= "300px"
+//     img.style.height = "300px"
+//     console.log("image was just changed");
+// }
+// // checks if the document is stil loading and added an event listener that changes the image 
+// if(document.readyState = "loading"){
+//     document.addEventListener("DOMContentLoaded", changeImage);
+// }else{
+//     console.log("DOM has already fired up");
+//     changeImage();  // callback the function if the document has already loaded
+// }
 
 // setTimeout() and setInterval() methods
 
@@ -133,3 +133,87 @@ clearTimeout(timeoutID); // This will not run since it has been stopped by the c
 // requestAnimationFrame() method in events2.js
 
 // console.log(rectangle.window.innerWidth);
+
+
+// BRO CODE
+// eventListener - listen for specific events to create interactive web pages events: clicks, mouseOver, mouseOut 
+// event is an object that contains information about something that might happen
+// the target is what we clicked on
+
+const box = document.getElementById("myBox")
+
+box.addEventListener('click', changeColorBox)
+
+function changeColorBox(event){
+    event.target.style.backgroundColor = "red";
+    event.target.textContent = "OUCH!!";
+    console.log(event)
+}
+
+box.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "yellow";
+    event.target.textContent = "Don't do it";
+});
+
+box.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "black";
+    event.target.textContent = "Do it";
+    event.target.style.color =  "white"
+    
+});
+
+const myButttonClick = document.getElementById("myButttonClick");
+myButttonClick.addEventListener("click", (event) => {
+    event.target.style.width = "300px"; // to increase the width of the button to 300px when clicked
+});
+
+
+// KEY EVENTS
+
+// keydown when you press the key
+// keyUp when you release the key 
+
+document.addEventListener("keydown", (event) => {
+    console.log(event.key); // listen to any key pressed
+});
+
+document.addEventListener("keyup", (event) => {
+    console.log(`key up = ${event.key}`)
+});
+
+
+const myBox2 = document.getElementById("myBox2");
+const moveAmount = 100;
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", (event) => {
+
+    myBox2.textContent = "#MyBox"
+    myBox2.style.backgroundColor =  "grey";
+    event.preventDefault();
+
+    if(event.key.startsWith("Arrow")){
+        switch (event.key) {
+            case "ArrowUp":
+                y -= moveAmount
+                break;
+            case "ArrowDown":
+                y += moveAmount
+                break;
+            case "ArrowLeft":
+                x -= moveAmount
+                break;
+            case "ArrowRight":
+                x += moveAmount
+                break;
+            default:
+                break;
+        }
+        myBox2.style.top = `${y}px`;
+        myBox2.style.top = `${x}px`;
+    }
+})
+
+
+

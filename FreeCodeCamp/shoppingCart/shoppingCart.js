@@ -145,14 +145,15 @@ class ShoppingCart {
   }
 
   // calcuulate taxes
-  calculateTaxex(amount){
-    return parseFloat(((this.taxRate / 100) * amount).toFixed(2))
+  calculateTaxes(amount) {
+    return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
   }
+
   // calculate the total
-  calculateTotal(){
-    const subTotal =  this.items.reduce((total, item) => total + item.price, 0);
-    const tax = this.calculateTaxex(subTotal);// callback the function to calculate the tax
-    this.total = subTotal + tax; // the sum of the tax plus the subTotal
+  calculateTotal() {
+    const subTotal = this.items.reduce((total, item) => total + item.price, 0);
+    const tax = this.calculateTaxes(subTotal);
+    this.total = subTotal + tax;
     cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
     cartTaxes.textContent = `$${tax.toFixed(2)}`;
     cartTotal.textContent = `$${this.total.toFixed(2)}`;
@@ -210,11 +211,6 @@ clearCartBtn.addEventListener("click", ()=> {
 
 
 
-
-
-
-
-
 // create a products arry of objects
 
 // iterate through the product array and create a new div element
@@ -257,5 +253,4 @@ clearCartBtn.addEventListener("click", ()=> {
 
 
 
-
-
+// 

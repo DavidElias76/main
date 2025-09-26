@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 95vh;
+        }
+        h1{
+            font-size: 3.5rem;
+            color: hsl(0, 0%, 20%);
+        }
+        #choices{
+            margin-bottom: 30px;   
+        }
+        #choices button{
+            font-size: 5rem;
+            min-width: 160px;
+            margin: 0 10px;
+            border-radius: 50px;
+            background-color: blue;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+        #choices button:hover{
+            background-color:  hsl(200, 100%, 70%);
+        }
+        #playerDisplay, #computerDisplay{
+            font-size: 2.5rem;
+        }
+        #resolveDisplay{
+            font-size: 5rem;
+            margin: 30px 0;
+        }
+        #text{
+            font-size: 1.5rem;
+            color: hsl(0, 0%, 30%);
+            max-width: 600px;
+            text-align: center;
+            margin-top: -10px;
+        }
+        .scoreDisplay{
+            font-size: 2rem;
+
+        }
+        .greenText, #playerScoreDisplay{
+            color: green;
+        }
+        .redText, #computerScoreDisplay{
+            color: red;
+        }
+        .blueText{
+            color: blue;
+        }
+        #displayScores{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: hsl(0, 0%, 90%);
+            padding: 5px 30px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="displayScores">
+        <div id="scoreDisplay">Player Score:
+            <span id="playerScoreDisplay">0</span>
+      </div>  
+        <h1>Rock, Paper and Scissors Game</h1>
+        <div id="scoreDisplay">Computer Score:
+            <span id="computerScoreDisplay">0</span>
+      </div>
+    </nav>
+
+    <div id="choices">
+        <button class="buttons" data-choice = "rock">👊</button>
+        <button class="buttons" data-choice = "paper">✋</button>
+        <button class="buttons" data-choice = "scissors">✌️</button>
+    </div>
+
+    <!-- display who wins the game -->
+    <div id="playerDisplay"></div>
+    <div id="computerDisplay"></div>
+    <div id="resolveDisplay"></div>
+
+    <!-- display text -->
+     <p id="text"></p>
+
+     <!-- display the score -->
+      <!-- <div id="scoreDisplay">Player Score:
+        <span id="playerScoreDisplay">0</span>
+      </div>
+
+      <div id="scoreDisplay">Computer Score:
+        <span id="computerScoreDisplay">0</span>
+      </div> -->
+    <script src="rockPaper.js"></script>
+</body>
+</html>

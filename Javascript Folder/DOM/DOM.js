@@ -73,17 +73,17 @@ divEl.setAttribute("class", "example");
 
 // Events
 
-const button = document.getElementById("btn");
-button.addEventListener("click", () => {
-    alert("You have clicked a button");
-});
+// const button = document.getElementById("btn");
+// button.addEventListener("click", () => {
+//     alert("You have clicked a button");
+// });
 
 
 // input event
-const input = document.getElementById("input");
-input.addEventListener("click", () => {
-    console.log(input.value); // log the value into the console
-});
+// const input = document.getElementById("input");
+// input.addEventListener("click", () => {
+//     console.log(input.value); // log the value into the console
+// });
 
 // remove Event Listener
 
@@ -105,11 +105,63 @@ function toggleBgColor() {
     isBgColorGrey = !isBgColorGrey; // it becomes false
 }
 
-button2.addEventListener("click", toggleBgColor);
-// add an remove event listener to the paragraph element when the mouse is hovered over the paragraph
-para2.addEventListener("mouseover", () => {
-    button2.removeEventListener("click", toggleBgColor); // specifying which event to be removed with their two arguments
+// button2.addEventListener("click", toggleBgColor);
+// // add an remove event listener to the paragraph element when the mouse is hovered over the paragraph
+// para2.addEventListener("mouseover", () => {
+//     button2.removeEventListener("click", toggleBgColor); // specifying which event to be removed with their two arguments
+// });
+
+
+// fruits
+
+const fruitsDom = document.getElementsByClassName("fruits")
+console.log(fruitsDom);
+
+// // change one of the elements
+// fruitsDom[0].style.backgroundColor = "yellow";
+// fruitsDom[1].style.backgroundColor = "red";
+// fruitsDom[2].style.backgroundColor = "green";
+
+// iterate through the elements using the for each method
+
+// for(let fruit of fruitsDom){
+//     fruitsDom.style.backgroundColor = "yellow";
+// }
+
+// convert the HTML collection to an array to use the forEach() method to loop through the elements
+
+Array.from(fruitsDom).forEach(fruit => {
+    fruit.style.backgroundColor = "red";
 });
+
+// Get the Elements by tagName
+
+const h3Elements = document.getElementsByTagName("h3")
+console.log(h3Elements);
+
+// acess the text of the element
+
+// h4Element[0].style.backgroundColor = "yellow"
+
+// iterate through the element using the for loop method
+
+for(let h3Element of h3Elements){
+    h3Element.style.backgroundColor = "yellow";
+}
+
+const liElements = document.getElementsByTagName("li"); // get all li elements
+
+for(let liElement of liElements){
+    liElement.style.backgroundColor = "lightgreen"
+}
+
+// convert the elements to an array using the array.from() method
+Array.from(liElements).forEach(liElement => {
+    liElement.style.backgroundColor =  "lightblue";
+})
+
+
+
 
 
 

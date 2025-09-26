@@ -98,26 +98,26 @@
 
     // ARRAY METHODS
 
-    document.write("demo15: " + fruits.toString() + "<br>");
-    document.write("demo16: " + fruits.at(2) + "<br>");
-    document.write("demo17: " + fruits.join(" * ") + "<br>");
+    document.write("demo15: " + fruits.toString() + "<br>"); // convert the array intro strings
+    document.write("demo16: " + fruits.at(2) + "<br>"); // get an element at specified index
+    document.write("demo17: " + fruits.join(" * ") + "<br>"); // join elements af an array
 
     // POPPING AND PUSHING
 
-    document.write("demo18: " + fruits.pop() + "<br>" + fruits + "<br>");
-    document.write("demo19: " + fruits.push("Kiwi") + "<br>");
-    document.write("demo20: " + fruits + "<br>");
+    document.write("demo18: " + fruits.pop() + "<br>" + fruits + "<br>"); // remove the last element of an array 
+    document.write("demo19: " + fruits.push("Kiwi") + "<br>");// add element to the array at the end
+    document.write("demo20: " + fruits + "<br>"); 
 
     // SHIFTING ELEMENTS
 
-    document.write("demo21: " + fruits.shift() + "<br>");
+    document.write("demo21: " + fruits.shift() + "<br>"); // removes the first element of an array ate the begining 
     document.write("demo20: " + fruits + "<br>");
-    document.write("demo21: This is unshift: " + fruits.unshift("lemon") + "<br>");
+    document.write("demo21: This is unshift: " + fruits.unshift("lemon") + "<br>"); // add a new element toan arrat at the begining
     document.write("demo22: " + fruits + "<br>");
 
     // CHANGING ELEMENTS
 
-    fruits[fruits.length] = "Pears";
+    fruits[fruits.length] = "Pears"; // provides an easy way to append a new element to an array:
     document.write("demo23: " + fruits[fruits.length - 1] + "<br>");
     document.write("demo24: " + fruits + "<br>");
 
@@ -125,65 +125,76 @@
 
     const myGirls = ["Cecilie", "Lone"];
     const myBoys = ["Emil", "Tobias", "Linus"];
-    const myChildren = myGirls.concat(myBoys);
+    const myChildren = myGirls.concat(myBoys); // joins two array into one
     document.write("demo25: " + myChildren + "<br>");
 
     const arr3 = ["Robin", "Morgan"];
-    const myChildren2 = myGirls.concat(myBoys, arr3);
+    const myChildren2 = myGirls.concat(myBoys, arr3); // // joins two array into one
     document.write("demo26: " + myChildren2 + "<br>");
 
-    const myChildren3 = arr3.concat("Peter");
+    const myChildren3 = arr3.concat("Peter"); // joins two array into one
     document.write("demo27: " + myChildren3 + "<br>");
 
     // ARRAY COPYWITHIN()
-    document.write("demo28: " + fruits.copyWithin(2, 0) + "<br>");
+    document.write("demo28: " + fruits.copyWithin(2, 0) + "<br>"); // The copyWithin() method copies array elements to another position in an array:
 
     // FLATTENING AN ARRAY
 
     const myArr = [[1,2], [3,4], [5,6]];
-    const newArr = myArr.flat();
+    const newArr = myArr.flat(); // convert a multidimensional array into a single dimensional array
     document.write("demo29: " + newArr + "<br>");
 
     // SPLICING AND SLICING
 
-    fruits.splice(2,0,"Banana", "Kiwi");
+    // The diffrence btw the splice and the slice method is that the slice() method doesnot modify the original array while the splice() method chnages the original array
+    fruits.splice(2,0,"Banana", "Kiwi"); // adds a new element to an array at a specified position and an element to remove(Can add, remove, or replace elements.)
     document.write("demo30: The array after sliced are: " + fruits + "<br>");
 
-    const citrus = fruits.slice(1);
+    // The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+    const months = ["Jan", "Feb", "Mar", "Apr"];
+    const spliced = months.toSpliced(0, 1);
+    console.log(spliced);
+
+    const citrus = fruits.slice(1);// used to slice out a piece of an array into  an anew array
     document.write("demo32: " + citrus + "<br>");
 
-    const citrus2 = fruits.slice(1, 3);
+    const citrus2 = fruits.slice(1, 3);// used to slice out a piece of an array into an new array
     document.write("demo33: Array after sliced is: " + citrus2 + "<br>");
 
     // JAVASCRIPT ARRAY SEARCH
 
     document.write("demo34: The array is: " + fruits + "<br>");
-    let position1 = fruits.indexOf("Apple");
+    let position1 = fruits.indexOf("Apple");  // return theindex of a array
     document.write("demo35: Apple is in index: " + position1 + "<br>");
-    let position2 = fruits.lastIndexOf("Apple");
+    let position2 = fruits.lastIndexOf("Apple");// retuns the index of the last occurence of a specified element
     document.write("demo36: Apple is in last indexof: " + position2 + "<br>");
 
     const temp = [27, 28, 30, 40, 42, 35, 30];
-    let first = temp.find(function(value){ return value > 18; });
+    let first = temp.find(function(value){ return value > 18; }); // returns the value of the first element that passes a function
     document.write("demo37: The temp is greater than 18 is: " + first + "<br>");
-    let first2 = temp.findIndex(function(value){ return value > 18; });
+    let first2 = temp.findIndex(function(value){ return value > 18; });  // returns the index  of the first element that passes a function
     document.write("demo38: The index of temp is greater than 18 is: " + first2 + "<br>");
-    let high = temp.findLast(x => x > 40);
+    let high = temp.findLast(x => x > 40); // will start at the end of the end of the array and returns the value of the element that passes a condition
     document.write("demo39: The temp value from the last: " + high + "<br>");
-    let high2 = temp.findLastIndex(x => x > 40);
+    let high2 = temp.findLastIndex(x => x > 40); // finds the index of the last element that satisfies a condition
     document.write("demo40: The temp value from the last: " + high2 + "<br>");
 
     // JAVASCRIPT SORTING ARRAYS
 
-    fruits.sort();
+    // sorting the arrays alphabetically
+    // The difference between toSorted() and sort() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.
+    fruits.sort(); // method sorts an array alphabetically:
     document.write("demo41: The array is sorted: " + fruits + "<br>");
-    fruits.reverse();
+    fruits.reverse(); //  method reverses the elements in an array:
     document.write("demo42: The array is reversed: " + fruits + "<br>");
-    fruits.toSorted();
+
+    // The difference between toReversed() and reverse() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.
+    fruits.toSorted();// method as a safe way to sort an array without altering the original array.
     document.write("demo43: The array is tosorted: " + fruits + "<br>");
-    fruits.toReversed();
+    fruits.toReversed();// method as a safe way to sort an array without altering the original array
     document.write("demo44: The array is to reversed: " + fruits + "<br>");
 
+    // NUMERIC SORT
     const points = [40, 100, 1, 5, 25, 10];
     points.sort(function(a, b){return a - b});
     document.write("demo45: Sorting numeric array in ascending order: " + points + "<br>");

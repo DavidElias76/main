@@ -789,7 +789,6 @@ const foodsArray = toGetFood(food1, food2, food3, food4, food5)
 console.log(foodsArray)// an array created
 
 // example
-
 function sum(...numbers){
     let result = 0;
     for(let number of numbers){
@@ -1011,7 +1010,7 @@ const sqaures = numbersArray.map(function(element) {
 console.log(sqaures);
 
 const totalNumbersArray = numbersArray.reduce((sum, amount) => sum + amount);
-console.log("The total number is nthe array are: " + totalNumbersArray)
+console.log("The total number is the array are: " + totalNumbersArray)
 
 
 // ARROW FUNCTIONS 
@@ -1021,26 +1020,23 @@ console.log("The total number is nthe array are: " + totalNumbersArray)
 
 // example
 
-setTimeout( () => console.log("Hello Arrow function"), 3000)
+// setTimeout( () => console.log("Hello Arrow function"), 3000)
 
 
 // exercise
 
+// If a function is called with too many arguments (more than declared), these arguments can be reached using the arguments object.
 
-// JAVASCRIPT OBJECTS
+const numbersNewArray = [1, 3, 4, 5, 7, 9];
 
-// A collection of related properties and methods 
-// can represent real obejcts(people)
-
-const person = {
-    firstName: "SpongeBob",
-    lastName: "Squarepants",
-    age: 30,
-    isEmployed: true
+const maxNumber = () => {
+    let max = -Infinity;  // smallest possible number
+    for (let i = 0; i < numbersNewArray.length; i++) {
+        if (numbersNewArray[i] > max) {
+            max = numbersNewArray[i];
+        }
+    }
+    return max;
 }
 
-// You can access the javascript values using the object dot notation or square brackets notation
-
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.isEmployed);
+console.log("The maximum number is: " + maxNumber()); // 9

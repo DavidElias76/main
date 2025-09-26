@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* General Reset & Base Styling */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 96%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    }
+
+    /* Button Styling */
+    button {
+    padding: 14px 30px;
+    color: white;
+    background: linear-gradient(135deg, #00c853, #009624);
+    border: none;
+    border-radius: 0.6rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    button:hover {
+    background: linear-gradient(135deg, #00e676, #00c853);
+    transform: translateY(-2px);
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Select Dropdown */
+    select {
+    padding: 12px;
+    width: 260px;
+    margin-bottom: 2rem;
+    color: #333;
+    background: #fff;
+    border: 1.5px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    select:focus {
+    border-color: #00c853;
+    box-shadow: 0 0 5px rgba(0, 200, 83, 0.4);
+    outline: none;
+    }
+
+    /* Option Styling */
+    option {
+    padding: 10px;
+    background-color: #fafafa;
+    color: #333;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    }
+
+    option:hover {
+    background-color: #e0f2f1;
+    }
+
+    </style>
+</head>
+<body>
+
+    <button id = "get-weather-btn">Get Weather</button>
+    <select>
+      <option value = ""></option>
+      <option value = "new york">New York</option>
+      <option value = "los angeles">Los Angeles</option>
+      <option value = "chicago">Chicago</option>
+      <option value = "paris">Paris</option>
+      <option value = "tokyo">Tokyo</option>
+      <option value = "london">London</option>
+    </select>
+    <div id="weather-container">
+        <img src="" alt="Weather Icon" id="weather-icon"/>
+        <div id="main-temperature"></div>
+        <div id="feels-like"></div>
+        <div id="humidity"></div>
+        <div id="wind"></div>
+        <div id="wind-gust"></div>
+        <div id="weather-main"></div>
+        <div id="location"></div>
+    </div>
+        <script src="weather2.js"></script>
+    </body>
+</html>

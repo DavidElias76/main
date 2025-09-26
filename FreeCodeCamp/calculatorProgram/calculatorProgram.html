@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Program</title>
+    <style>
+        button{
+            width: 100px;
+            height: 70px;
+            border-radius: 50%, 50%;
+            border: none;
+            background-color: hsl(0, 0%, 30%);
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #keys{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 25px;
+        }
+        #calculator{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: hsl(0, 0%, 95%);
+            border-radius: 15px;
+            max-width: 500px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        #display{
+            width: 100%;
+            font-size: 5rem;
+            padding: 20px;
+            text-align: left;
+            background-color: hsl(0, 0%, 20%);            
+            color: white;
+        }
+        body{
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+        button:hover{
+            background-color:  hsl(0, 0%, 40%);
+        }
+        button:active{
+            background-color: hsl(0, 0%, 50%);
+        }
+        .operatorBtn{
+            background-color: hsl(35, 100%, 65%);
+        }
+        .operatorBtn:hover{
+            background-color: hsl(35, 100%, 55%);
+        }
+        .operatorBtn:active{
+            background-color: hsl(35, 100%, 75%);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div id="keys">
+            <button class="operatorBtn">+</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operatorBtn">-</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operatorBtn">*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operatorBtn">/</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+            <button>C</button>
+        </div>
+        
+        <!-- <div id="keys">
+            <button onclick="appendToDsiplay('+')" class="operatorBtn">+</button>
+            <button onclick="appendToDsiplay('7')">7</button>
+            <button onclick="appendToDsiplay('8')">8</button>
+            <button onclick="appendToDsiplay('9')">9</button>
+            <button onclick="appendToDsiplay('-')" class="operatorBtn">-</button>
+            <button onclick="appendToDsiplay('4')">4</button>
+            <button onclick="appendToDsiplay('5')">5</button>
+            <button onclick="appendToDsiplay('6')">6</button>
+            <button onclick="appendToDsiplay('*')" class="operatorBtn">*</button>
+            <button onclick="appendToDsiplay('1')">1</button>
+            <button onclick="appendToDsiplay('2')">2</button>
+            <button onclick="appendToDsiplay('3')">3</button>
+            <button onclick="appendToDsiplay('/')" class="operatorBtn">/</button>
+            <button onclick="appendToDsiplay('0')">0</button>
+            <button onclick="appendToDsiplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDsiplay()" class="operatorBtn">C</button>
+        </div> -->
+    </div>
+    <script src="calculatorProgram.js"></script>
+</body>
+</html>
