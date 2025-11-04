@@ -171,6 +171,7 @@ solutionDescription.addEventListener("input", ()=> {
 
 // submit form
 const submitForm = document.getElementById("submit-btn");
+
 submitForm.addEventListener("submit", (e)=> {
      e.preventDefault(); // prevent default submission
      
