@@ -523,6 +523,18 @@ if(PIValue ==="3.14"){
     console.log("That is not a PI"); // not same   
 }
 
+// LABELS: 
+
+// A label provides a name for a statement, or a block of statements, allowing statements to be referenced to, for program flow control, particularly in loops.
+
+let textvalue = "";
+
+loop1: for (let j = 1; j < 5; j++) {
+  loop2: for (let i = 1; i < 5; i++) {
+    if (i === 3) { continue loop1; }
+    textvalue += i + "<br>";
+  }
+}
 
 // WHILE LOOPS - Repeat some code while the condition is true and cancel the code when the condition is false
 
