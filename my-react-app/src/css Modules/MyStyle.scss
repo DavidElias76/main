@@ -1,0 +1,39 @@
+// Sass is a CSS pre-processor.
+
+// NOTE: Sass files are executed on the server and sends CSS to the browser.
+
+// Sass adds extra features to CSS like variables, nesting, mixins, and more.
+
+// start by installing the MyStyle.scss module
+
+// npm install sass - not installed yet 
+
+$myColor: red;
+
+h1 {
+  color: $myColor;
+}
+
+// Sass has many Built-in Modules that you can use to manipulate colors, math, strings, etc.
+// One example is the sass:color module.
+// It has a function to make a color darker or lighter, just by giving it a percentage:
+
+
+// The adjust take two arguments (the primary color and the reduced color percetange) and it is used to change the primary color 
+
+@use 'sass:color';
+$myColor_2: red;
+
+h1 {
+  color: $myColor_2;
+}
+
+h2 {
+  color: color.adjust($myColor_2, $lightness: -20%);
+}
+
+h3 {
+  color: color.adjust($myColor_2, $lightness: 20%);
+}
+
+// Note: Sass files are compiled to CSS at build time.
