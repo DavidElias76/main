@@ -69,7 +69,10 @@ import {ActionComponent} from './ReactUseActionState'
 // using the useActionState in react
 import {FormComponent} from './ReactFormActionState'
 
-import {LayoutEffectComponent} from './ReactUseLayoutEffect'
+// import {LayoutEffectComponent} from './ReactUseLayoutEffect'
+
+// simple form applocation fro freecodecamp
+import SimpleApplicationForm from './FreeCodeCamps-Projects/SimpleApplicationForm'
 
 
 // the greetings component containing other components such as cat and navBar
@@ -314,7 +317,9 @@ function Greetings(){
 
       {/* React useLayout */}
 
-      <LayoutEffectComponent />
+      {/* <LayoutEffectComponent /> */}
+
+      <SimpleApplicationForm />
 
       </>
 
