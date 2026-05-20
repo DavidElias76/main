@@ -31,7 +31,7 @@ export const updatePostsController = async (req, res) => {
     try {
         const {id} = req.params; // get the id of the post we are updating
 
-        if(Object.keys(req.body) === 0) return res.status(400).json({ message: 'No data provided for update'})
+        if(Object.keys(req.body).length === 0) return res.status(400).json({ message: 'No data provided for update'})
 
         const post = await Post.findByIdAndUpdate(id, req.body, {new: true}) // this finds the post with specific id and updates the posts with the data in the req.body
 
