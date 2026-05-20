@@ -16,8 +16,6 @@ export const signUp = async (req, res, next) => {
     try {
         const {name, email, password} = req.body; // get the name email and password
 
-        console.log(name, email, password)
-
          // validate fields
         if (!name || !email || !password) {
             return res.status(400).json({
@@ -93,7 +91,7 @@ export const signUp = async (req, res, next) => {
 export const signIn = async (req, res) => {
     const {email, password} = req.body;
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("-password"); // gets the id, name and the email but not the password
 
     // check if te user exist 
     if(!user) {
@@ -118,11 +116,17 @@ export const signIn = async (req, res) => {
         {expiresIn: process.env.JWT_EXPIRES_IN}
     )
 
+    const userResponse = {
+            id: user._id,
+            name: user.name,
+            email: user.email
+        };
+
     res.status(200).json({
         success: true,
         message: "User signed In successfully",
         token,
-        user
+        user: userResponse
     })
 }
 export const signOut = async (req, res) => {
