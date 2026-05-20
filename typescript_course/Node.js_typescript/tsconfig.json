@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext", // tells TypeScript to output ESM modules, following how Node.js handles them
+    "moduleResolution": "NodeNext", // 
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
+// { "compilerOptions": { "experimentalDecorators": true, "emitDecoratorMetadata": true } } -This is for the use of the postgree sql purposes
