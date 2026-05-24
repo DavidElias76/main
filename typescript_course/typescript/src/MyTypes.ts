@@ -2,7 +2,7 @@
 // NOTE: The types can be defined in one file and import them when we want to use them 
 
 // create an aliase
-type User = {
+type new_User = {
     name : string;
     email: string;
     isActive: boolean;
@@ -11,7 +11,7 @@ type User = {
 // The user object being passed as an argument should be a type of user 
 // This will check if the user object has the value of the data types of user
 
-function createUser(user: User) {
+function createUser(user: new_User) {
     return user; // this will return an object called user that is passed as an argument
 }
 
