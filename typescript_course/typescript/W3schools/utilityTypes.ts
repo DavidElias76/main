@@ -1,16 +1,38 @@
 // Partial
 // Partial changes all the properties in an object to be optional.
 
-interface Point {
+interface new_Point {
     x: number,
     y: number 
 }
 
-let pointPart: Partial<Point> = {}; // make the properties of an object to be optional
+let pointPart: Partial<new_Point> = {}; // make the properties of an object to be optional
 pointPart.x = 10
 console.log(pointPart)
 
-// Required
+// example:
+
+interface newTodo {
+  title: string;
+  description: string;
+}
+ 
+// This function updates the description property and leaves the rest
+function updateTodo(todo: newTodo, fieldsToUpdate: Partial<Todo>) {
+  return { ...todo, ...fieldsToUpdate };
+}
+ 
+const newTodo1 = {
+  title: "organize desk",
+  description: "clear clutter",
+};
+ 
+const todo2 = updateTodo(newTodo1, {
+  description: "throw out trash",
+});
+
+
+// Required: Record<Keys, Type>
 // Required changes all the properties in an object to be required.
 
 interface Car {
@@ -19,6 +41,7 @@ interface Car {
   mileage?: number;
 }
 
+// Makes all the propeties required by the object
 let myCar: Required<Car> = {
   make: 'Ford',
   model: 'Focus',
@@ -36,8 +59,30 @@ const nameAgeMap: Record<string, number> = {
 console.log(nameAgeMap); // {}
 // NOTE: Record<string, number> is equivalent to { [key: string]: number }
 
+// example: 
+type CatName = "miffy" | "boris" | "mordred"; // This are the keys that will be used to construct the object
+ 
+// This are the property names 
+interface CatInfo {
+  age: number;
+  breed: string;
+}
+ 
+const cats: Record<CatName, CatInfo> = {
+  miffy: { age: 10, breed: "Persian" },
+  boris: { age: 5, breed: "Maine Coon" },
+  mordred: { age: 16, breed: "British Shorthair" },
+};
 
-// Omit
+// This prints the object properties 
+console.log(cats.boris);
+console.log(cats.miffy)
+console.log(cats.mordred)
+ 
+// const cats: Record<CatName, CatInfo>
+
+
+// Omit: Omit<Type, Keys>
 // Omit removes keys from an object type.
 
 interface PersonOmit {
@@ -54,8 +99,34 @@ const bob: Omit<PersonOmit, 'age' | 'location'> = {
 
 console.log(bob); // in the object the properties name and age have been removed
 
+// example: 
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+  createdAt: number;
+}
+ 
+type NewTodoPreview = Omit<Todo, "description">; // removes the description 
+ 
+const new_todo: NewTodoPreview = {
+  title: "Clean room",
+  completed: false,
+  createdAt: 1615544252770,
+};
+ 
+console.log(new_todo);
+ 
+// const todo: TodoPreview
+ 
+type TodoInfo = Omit<Todo, "completed" | "createdAt">; // Removes the completed and the createdAt property 
+ 
+const todoInfo: TodoInfo = {
+  title: "Pick up kids",
+  description: "Kindergarten closes at 5pm",
+};
 
-// Pick
+// Pick: Pick<Type, Keys>
 // Pick removes all but the specified keys from an object type.
 
 interface Person_3 {
@@ -69,6 +140,23 @@ const bobObject: Pick<Person_3, 'name'> = {
   // `Pick` has only kept name, so age and location were removed from the type and they can't be defined here
 };
 console.log(bobObject)
+
+// Example:
+
+interface New_Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+ 
+type TodoPreview = Pick<New_Todo, "title" | "completed">; // Takes the title and the completed property 
+ 
+const todo: TodoPreview = {
+  title: "Clean room",
+  completed: false,
+};
+ 
+todo;
 
 
 // Exclude
@@ -152,3 +240,46 @@ function createStringPair(property: keyof StringMap, value: string): StringMap {
 }
 
 console.log(JSON.stringify(createStringPair('greeting', 'hello')));
+
+// Awaited Types
+
+// This type is meant to model operations like await in async functions, or the .then() method on Promises - specifically, the way that they recursively unwrap Promises.
+// Awaited<Type>
+
+type A= Awaited<Promise<string>>; // This waits for s atring promise
+    
+// type A = string
+ 
+type B = Awaited<Promise<Promise<number>>>; // This waits for a number promise
+    
+// type B = number
+ 
+type C = Awaited<boolean | Promise<number>>; // This wais for a boolean value and a number promise
+    
+// type C = number | boolean
+
+
+// NonNullable Types
+// NonNullable<Type>
+// Constructs a type by excluding null and undefined from Type.
+
+type T0 = NonNullable<string | number | undefined>; // removes the null and undefined from the types
+// type T0 = string | number
+type T1 = NonNullable<string[] | null | undefined>;
+// type T1 = string[]
+
+// Return Types
+// ReturnType<Type>
+
+type NewT0 = ReturnType<() => string>; // This returns a string 
+     
+// type T0 = string
+type NewT1 = ReturnType<(s: string) => void>; // This takes a string paramater and returns void
+     
+// type T1 = void
+type T2 = ReturnType<<T>() => T>;
+     
+// type T2 = unknown
+type T3 = ReturnType<<T extends U, U extends number[]>() => T>;
+     
+// type T3 = number[]
