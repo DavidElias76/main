@@ -1,14 +1,20 @@
-import express from 'express'
-import type { Express } from 'express';
-import { pets } from './data/pets';
+import express, { json } from 'express'
+import type { Express, Request, Response, NextFunction } from 'express';
+import cors from "cors";
+import petsRoutes from './routes/pets.routes';
 
 const app: Express = express(); // Adding the type of Express in the app instance 
 
 const PORT: number = 8080;
 
-app.get('/', (req, res) => {
-    res.json(pets)
-    console.log(`sent the pet object`)
+app.use(cors()) // install the cors type dependencies
+
+app.use('/', petsRoutes)
+
+// (res.body)This response tells typescript what type of reposnse body should be expected -Whe having the wrong routes/endpoint
+app.use((req: Request, res: Response<{ message: string }>, next: NextFunction): void => {
+    res.status(404).json({ message: "Endpoint not found" })
+    next();
 })
 
 app.listen(PORT, (): void => {

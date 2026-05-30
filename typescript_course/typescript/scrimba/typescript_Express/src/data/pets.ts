@@ -1,4 +1,4 @@
-type Pet = {
+export type Pet = {
     id: number
     name: string,
     species: string,
@@ -14,17 +14,6 @@ type Pet = {
     }
     photo: string
 }
-
-/*
-CHALLENGE: Fix the Pet type!
-
-1. Look at the pet objects and note their properties
-2. Update the `Pet` type so it matches
-3. Decide which fields should be optional (compare #1 and #2)
-
-Hint: some fields might need unions, arrays, literals, `null`, or even a `Date`.
-Look them up if you’re not sure!
-*/
 
 export const pets: Pet[] = [  
     {  
